@@ -1,0 +1,8 @@
+main.c:96:5:main	8	static
+main.c:188:6:peek_execution	32	static
+main.c:213:6:poke_execution	16	static
+main.c:235:10:str_to_int	24	static
+main.c:268:6:SystemClock_Config	72	static
+main.c:303:13:MX_USART1_UART_Init	8	static
+main.c:336:13:MX_GPIO_Init	16	static
+main.c:352:6:Error_Handler	4	static

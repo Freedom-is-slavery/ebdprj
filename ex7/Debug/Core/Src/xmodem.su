@@ -1,0 +1,4 @@
+xmodem.c:33:6:xmodem_receive	24	static
+xmodem.c:102:9:calsum	24	static
+xmodem.c:120:10:calcrc	24	static
+xmodem.c:141:6:xmodem_delay200us	8	static
