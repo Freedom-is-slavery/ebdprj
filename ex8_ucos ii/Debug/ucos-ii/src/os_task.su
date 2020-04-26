@@ -1,0 +1,16 @@
+os_task.c:53:8:OSTaskChangePrio	40	static
+os_task.c:211:8:OSTaskCreate	56	static
+os_task.c:336:8:OSTaskCreateExt	56	static
+os_task.c:435:8:OSTaskDel	32	static
+os_task.c:581:8:OSTaskDelReq	32	static
+os_task.c:648:8:OSTaskNameGet	40	static
+os_task.c:730:7:OSTaskNameSet	32	static
+os_task.c:805:8:OSTaskResume	24	static
+os_task.c:872:8:OSTaskStkChk	40	static
+os_task.c:957:8:OSTaskSuspend	32	static
+os_task.c:1030:8:OSTaskQuery	24	static
+os_task.c:1097:9:OSTaskRegGet	32	static
+os_task.c:1160:8:OSTaskRegGetID	24	static
+os_task.c:1220:7:OSTaskRegSet	32	static
+os_task.c:1278:7:OS_TaskReturn	8	static
+os_task.c:1315:7:OS_TaskStkClr	24	static

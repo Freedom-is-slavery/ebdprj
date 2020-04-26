@@ -20,6 +20,8 @@ ZJU CS 嵌入式系统课程 实验与项目设计
 
 ## ex7 自主BootLoader
 
-## ex8 uCOS-II 温度计
+## ex8 ucos-II在STM32F103上的移植
 
-## ex9 Free-RTOS 温度计
+## ex9 uCOS-II 温度计
+
+## ex10 Free-RTOS 温度计
