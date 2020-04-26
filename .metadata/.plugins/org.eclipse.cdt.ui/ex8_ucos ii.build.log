@@ -1,20 +1,7 @@
-16:12:37 **** Incremental Build of configuration Debug for project ex8_ucos ii ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../ucos-ii/config -I../ucos-ii/port -I../ucos-ii/src -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "ex8_ucos ii.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\admin\Desktop\STM32_test\ebdprj\ex8_ucos ii\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ex8_ucos ii.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ex8_ucos ii.elf
- 
-arm-none-eabi-objdump -h -S  ex8_ucos\ ii.elf  > "ex8_ucos ii.list"
-arm-none-eabi-objcopy  -O binary  ex8_ucos\ ii.elf  "ex8_ucos ii.bin"
-arm-none-eabi-size   ex8_ucos\ ii.elf 
-   text	   data	    bss	    dec	    hex	filename
-  13388	     20	  15132	  28540	   6f7c	ex8_ucos ii.elf
-Finished building: default.size.stdout
- 
-Finished building: ex8_ucos ii.bin
- 
-Finished building: ex8_ucos ii.list
+16:31:34 **** Clean-only build of configuration Debug for project ex8_ucos ii ****
+make -j8 clean 
+rm -rf *
  
 
-16:12:40 Build Finished. 0 errors, 0 warnings. (took 2s.816ms)
+16:31:35 Build Finished. 0 errors, 0 warnings. (took 820ms)
 
