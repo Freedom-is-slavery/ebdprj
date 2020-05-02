@@ -1,7 +1,3 @@
-18:09:33 **** Clean-only build of configuration Debug for project STM32F103 ****
-make -j8 clean 
-rm -rf *
- 
 18:09:34 **** Incremental Build of configuration Debug for project STM32F103 ****
 make -j8 all 
 arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I"C:/Users/admin/Desktop/STM32_test/STM32F103/uCOS/CONFIG" -I"C:/Users/admin/Desktop/STM32_test/STM32F103/uCOS/CORE" -I"C:/Users/admin/Desktop/STM32_test/STM32F103/uCOS/PORT/IAR" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
@@ -39,3 +35,6 @@ Finished building: STM32F103.list
 Finished building: STM32F103.bin
  
  
+
+18:09:39 Build Finished. 0 errors, 0 warnings. (took 4s.814ms)
+
