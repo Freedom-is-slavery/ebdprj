@@ -1,0 +1,10 @@
+16:10:55 **** Incremental Build of configuration Debug for project ex9_ucos ii_Temprature ****
+make -j8 all 
+arm-none-eabi-size   ex9_ucos\ ii_Temprature.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14836	     20	  13196	  28052	   6d94	ex9_ucos ii_Temprature.elf
+Finished building: default.size.stdout
+ 
+
+16:10:56 Build Finished. 0 errors, 0 warnings. (took 1s.547ms)
+
