@@ -32,7 +32,8 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stdint-gcc.h"
+#include "includes.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -58,8 +59,32 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define LED1_Pin GPIO_PIN_13
-#define LED1_GPIO_Port GPIOC
+#define DIG1_Pin GPIO_PIN_14
+#define DIG1_GPIO_Port GPIOC
+#define SEG_A_Pin GPIO_PIN_15
+#define SEG_A_GPIO_Port GPIOC
+#define DIG3_Pin GPIO_PIN_0
+#define DIG3_GPIO_Port GPIOA
+#define SEG_B_Pin GPIO_PIN_1
+#define SEG_B_GPIO_Port GPIOA
+#define DIG4_Pin GPIO_PIN_2
+#define DIG4_GPIO_Port GPIOA
+#define SEG_G_Pin GPIO_PIN_3
+#define SEG_G_GPIO_Port GPIOA
+#define SEG_C_Pin GPIO_PIN_4
+#define SEG_C_GPIO_Port GPIOA
+#define SEG_DP_Pin GPIO_PIN_5
+#define SEG_DP_GPIO_Port GPIOA
+#define SEG_D_Pin GPIO_PIN_6
+#define SEG_D_GPIO_Port GPIOA
+#define SEG_E_Pin GPIO_PIN_7
+#define SEG_E_GPIO_Port GPIOA
+#define DHT11_DATA_Pin GPIO_PIN_8
+#define DHT11_DATA_GPIO_Port GPIOA
+#define DIG2_Pin GPIO_PIN_11
+#define DIG2_GPIO_Port GPIOA
+#define SEG_F_Pin GPIO_PIN_12
+#define SEG_F_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

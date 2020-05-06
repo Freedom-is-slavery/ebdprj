@@ -22,9 +22,10 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../ucos-ii/config/includes.h ../ucos-ii/src/ucos_ii.h \
  ../ucos-ii/config/app_cfg.h ../ucos-ii/config/os_cfg.h \
- ../ucos-ii/port/os_cpu.h
+ ../ucos-ii/port/os_cpu.h ../Core/Inc/digit.h ../Core/Inc/dht11.h
 
 ../Core/Inc/main.h:
 
@@ -74,6 +75,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
+
 ../ucos-ii/config/includes.h:
 
 ../ucos-ii/src/ucos_ii.h:
@@ -83,3 +86,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../ucos-ii/config/os_cfg.h:
 
 ../ucos-ii/port/os_cpu.h:
+
+../Core/Inc/digit.h:
+
+../Core/Inc/dht11.h:

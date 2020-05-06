@@ -15,56 +15,142 @@
   *                        opensource.org/licenses/BSD-3-Clause
   *
   ******************************************************************************
+  * @attention 
+  * 
+  * 这里修改了TIM4作为HAL Time Base的重装载计数周期
+  * 使得HAL_Delay(1)的时长为10us,方便DHT11的延时工作
   */
+
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "includes.h"
+#include "digit.h"
+#include "dht11.h"
 /* USER CODE END Includes */
-
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
 /* USER CODE END PTD */
-
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define LED_TASK_PRIO       10
-#define LED_TASK_STK_SIZE   500
 /* USER CODE END PD */
-
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
+#define TASK_UART_STK_SIZE          500
+#define TASK_DHT11READ_STK_SIZE     500
+#define TASK_DISPLAY_STK_SIZE       500
 
+#define TASK_UART_PRIO              7
+#define TASK_DHT11READ_PRIO         5
+#define TASK_DISPLAY_PRIO           6
 /* USER CODE END PM */
-
 /* Private variables ---------------------------------------------------------*/
+UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
-OS_STK LED_TASK_STK[LED_TASK_STK_SIZE];
-/* USER CODE END PV */
+OS_STK TASK_UART_STK[TASK_UART_STK_SIZE];
+OS_STK TASK_DHT11READ_STK[TASK_DHT11READ_STK_SIZE];
+OS_STK TASK_DISPLAY_STK[TASK_DISPLAY_STK_SIZE];
 
+const uint8_t UartSendBuf[] = "Temperature:     ; Humidity:    ";
+/* 任务间共享的全局变量 */
+uint8_t humidity, temperature;
+uint8_t frac_hum, frac_temp;
+/* USER CODE END PV */
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
-void LED_Task(void *pdata);
+/*  */
+void Task_Uart(void *pdata);
+void Task_DHT11Read(void *pdata);
+void Task_Display(void *pdata);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void LED_Task(void *pdata)
+
+/**
+ * @brief 每隔一秒向PC串口发送一次温湿度数据
+ * 
+ */
+void Task_Uart(void *pdata)
 {
-  while(1)
-  {
-    HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
-    OSTimeDly(1000);
+    int16_t cpu_sr;
+
+    while(1)
+    {
+        OS_ENTER_CRITICAL();
+        HAL_UART_Transmit(&huart1, (uint8_t *)UartSendBuf, sizeof(UartSendBuf), 1000);
+        OS_EXIT_CRITICAL();
+        OSTimeDly(2000);
+    }
+}
+
+/**
+ * @brief 每隔一秒读取一次DHT11的温湿度数据
+ * 
+ */
+void Task_DHT11Read(void *pdata)
+{
+    while(1)
+    {
+        DHT11Start();
+        DHT11ReceiveAndCheck();
+        OSTimeDly(2000);
+    }
+}
+
+/**
+ * @brief 实时在LED数码管上交替显示温度和湿度
+ * 
+ */
+void Task_Display(void *pdata)
+{
+    uint8_t tmp, tmparr[4];
+    uint8_t i;
+    uint16_t cnt = 0, cpu_sr;
+  
+    while(1)
+    {
+        if (cnt == 0)
+        {
+            OS_ENTER_CRITICAL();
+            tmp = temperature;
+            OS_EXIT_CRITICAL();
+            for(i = 4; i >= 1; i--)
+            {
+                tmparr[i-1] = tmp % 10;
+                tmp /= 10;
+            }
+        }     
+        else if (cnt == 100)
+        {
+            OS_ENTER_CRITICAL();
+            tmp = humidity;
+            OS_EXIT_CRITICAL();
+            for(i = 4; i >= 1; i--)
+            {
+                tmparr[i-1] = tmp % 10;
+                tmp /= 10;
+            }
+        }
+        else if (cnt == 200) 
+            cnt = 0;
+
+        for(i = 1; i <= 4; i++)
+        {
+            DisplayOneDigit(i, tmparr[i-1]);
+            OSTimeDly(60);
+        }
+        cnt ++;
   }
 }
+
+
 /* USER CODE END 0 */
 
 /**
@@ -73,38 +159,41 @@ void LED_Task(void *pdata)
   */
 int main(void)
 {
-  /* USER CODE BEGIN 1 */
-
-  /* USER CODE END 1 */
-
-  /* MCU Configuration--------------------------------------------------------*/
-
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
-  /* USER CODE BEGIN Init */
-  /* USER CODE END Init */
-  /* Configure the system clock */
-  SystemClock_Config();
-  /* USER CODE BEGIN SysInit */
-  /* USER CODE END SysInit */
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  /* USER CODE BEGIN 2 */
-  HAL_Delay(1000);
-  OSInit();
-  /* SysTick Frequency: 72MHz, time per beat: 0.1ms */
-  OS_CPU_SysTickInit(7200 - 1);    
-  OSTaskCreate(LED_Task, (void *)0, (OS_STK *)&LED_TASK_STK[LED_TASK_STK_SIZE - 1], LED_TASK_PRIO);
-  OSStart();
+    /* USER CODE BEGIN 1 */
+    uint8_t cnt;
+    /* USER CODE END 1 */
+    /* MCU Configuration--------------------------------------------------------*/
+    /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+    HAL_Init();
+    /* USER CODE BEGIN Init */
+    /* USER CODE END Init */
+    /* Configure the system clock */
+    SystemClock_Config();
+    /* USER CODE BEGIN SysInit */
+    /* USER CODE END SysInit */
+    /* Initialize all configured peripherals */
+    MX_GPIO_Init();
+    MX_USART1_UART_Init();
+    /* USER CODE BEGIN 2 */
+    for (cnt = 1; cnt <= 100; cnt++)
+    {
+        HAL_Delay(2000);
+    }
+    OSInit();
+  /* SysTick Frequency: 72MHz, time per beat: 0.5ms */
+    OS_CPU_SysTickInit(36000 - 1);    
+    OSTaskCreate(Task_Uart, (void *)0, (OS_STK *)&TASK_UART_STK[TASK_UART_STK_SIZE - 1], TASK_UART_PRIO);
+    OSTaskCreate(Task_DHT11Read, (void *)0, (OS_STK *)&TASK_DHT11READ_STK[TASK_DHT11READ_STK_SIZE - 1], TASK_DHT11READ_PRIO);
+    OSTaskCreate(Task_Display, (void *)0, (OS_STK *)TASK_DISPLAY_STK[TASK_DISPLAY_STK_SIZE - 1], TASK_DISPLAY_PRIO);
+    OSStart();
   /* USER CODE END 2 */
-
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
+    while (1)
+    {
     /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
-  }
+    }
   /* USER CODE END 3 */
 }
 
@@ -146,6 +235,39 @@ void SystemClock_Config(void)
 }
 
 /**
+  * @brief USART1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART1_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART1_Init 0 */
+
+  /* USER CODE END USART1_Init 0 */
+
+  /* USER CODE BEGIN USART1_Init 1 */
+
+  /* USER CODE END USART1_Init 1 */
+  huart1.Instance = USART1;
+  huart1.Init.BaudRate = 115200;
+  huart1.Init.WordLength = UART_WORDLENGTH_8B;
+  huart1.Init.StopBits = UART_STOPBITS_1;
+  huart1.Init.Parity = UART_PARITY_NONE;
+  huart1.Init.Mode = UART_MODE_TX_RX;
+  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART1_Init 2 */
+
+  /* USER CODE END USART1_Init 2 */
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -160,14 +282,37 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, DIG1_Pin|SEG_A_Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pin : LED1_Pin */
-  GPIO_InitStruct.Pin = LED1_Pin;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, DIG3_Pin|SEG_B_Pin|DIG4_Pin|SEG_G_Pin 
+                          |SEG_C_Pin|SEG_DP_Pin|SEG_D_Pin|SEG_E_Pin 
+                          |DHT11_DATA_Pin|DIG2_Pin|SEG_F_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pins : DIG1_Pin SEG_A_Pin */
+  GPIO_InitStruct.Pin = DIG1_Pin|SEG_A_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-  HAL_GPIO_Init(LED1_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : DIG3_Pin SEG_B_Pin DIG4_Pin SEG_G_Pin 
+                           SEG_C_Pin SEG_DP_Pin SEG_D_Pin SEG_E_Pin 
+                           DIG2_Pin SEG_F_Pin */
+  GPIO_InitStruct.Pin = DIG3_Pin|SEG_B_Pin|DIG4_Pin|SEG_G_Pin 
+                          |SEG_C_Pin|SEG_DP_Pin|SEG_D_Pin|SEG_E_Pin 
+                          |DIG2_Pin|SEG_F_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : DHT11_DATA_Pin */
+  GPIO_InitStruct.Pin = DHT11_DATA_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+  HAL_GPIO_Init(DHT11_DATA_GPIO_Port, &GPIO_InitStruct);
 
 }
 

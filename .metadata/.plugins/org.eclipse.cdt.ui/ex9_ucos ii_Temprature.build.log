@@ -1,10 +1,20 @@
-16:10:55 **** Incremental Build of configuration Debug for project ex9_ucos ii_Temprature ****
+00:58:16 **** Incremental Build of configuration Debug for project ex9_ucos ii_Temprature ****
 make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core/Inc -I../ucos-ii/src -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../ucos-ii/port -I../ucos-ii/config -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ex9_ucos ii_Temprature.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\admin\Desktop\STM32_test\ebdprj\ex9_ucos ii_Temprature\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ex9_ucos ii_Temprature.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ex9_ucos ii_Temprature.elf
+ 
+arm-none-eabi-objdump -h -S  ex9_ucos\ ii_Temprature.elf  > "ex9_ucos ii_Temprature.list"
+arm-none-eabi-objcopy  -O binary  ex9_ucos\ ii_Temprature.elf  "ex9_ucos ii_Temprature.bin"
 arm-none-eabi-size   ex9_ucos\ ii_Temprature.elf 
    text	   data	    bss	    dec	    hex	filename
-  14836	     20	  13196	  28052	   6d94	ex9_ucos ii_Temprature.elf
+  17524	    100	  17276	  34900	   8854	ex9_ucos ii_Temprature.elf
 Finished building: default.size.stdout
  
+Finished building: ex9_ucos ii_Temprature.bin
+ 
+Finished building: ex9_ucos ii_Temprature.list
+ 
 
-16:10:56 Build Finished. 0 errors, 0 warnings. (took 1s.547ms)
+00:58:18 Build Finished. 0 errors, 0 warnings. (took 2s.712ms)
 
