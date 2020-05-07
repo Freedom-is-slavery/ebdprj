@@ -36,6 +36,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 /* USER CODE END PD */
+
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 #define TASK_UART_STK_SIZE          500
@@ -47,6 +48,7 @@
 #define TASK_DISPLAY_PRIO           6
 /* USER CODE END PM */
 /* Private variables ---------------------------------------------------------*/
+TIM_HandleTypeDef htim3;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
@@ -54,17 +56,18 @@ OS_STK TASK_UART_STK[TASK_UART_STK_SIZE];
 OS_STK TASK_DHT11READ_STK[TASK_DHT11READ_STK_SIZE];
 OS_STK TASK_DISPLAY_STK[TASK_DISPLAY_STK_SIZE];
 
-const uint8_t UartSendBuf[] = "Temperature:     ; Humidity:    ";
+uint8_t UartSendBuf[] = "Temperature:   ; Humidity:   ";
 /* 任务间共享的全局变量 */
-uint8_t humidity, temperature;
-uint8_t frac_hum, frac_temp;
+uint8_t humidity, temperature;      /* 温湿度整数部分 */
+uint8_t frac_hum, frac_temp;        /* 温湿度小数部分 */
 /* USER CODE END PV */
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_TIM3_Init(void);
 static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
-/*  */
+/* 任务 */
 void Task_Uart(void *pdata);
 void Task_DHT11Read(void *pdata);
 void Task_Display(void *pdata);
@@ -84,29 +87,42 @@ void Task_Uart(void *pdata)
     while(1)
     {
         OS_ENTER_CRITICAL();
+        
+        UartSendBuf[13] = temperature / 10 + '0';
+        UartSendBuf[14] = temperature % 10 + '0';
+        UartSendBuf[27] = humidity / 10 + '0';
+        UartSendBuf[28] = humidity % 10 + '0';
+
         HAL_UART_Transmit(&huart1, (uint8_t *)UartSendBuf, sizeof(UartSendBuf), 1000);
+        
         OS_EXIT_CRITICAL();
         OSTimeDly(2000);
     }
 }
 
 /**
- * @brief 每隔一秒读取一次DHT11的温湿度数据
+ * @brief 每隔1.5秒读取一次DHT11的温湿度数据
  * 
  */
 void Task_DHT11Read(void *pdata)
 {
+    uint16_t cpu_sr;
+
     while(1)
     {
-        DHT11Start();
-        DHT11ReceiveAndCheck();
-        OSTimeDly(2000);
+        OS_ENTER_CRITICAL();
+        if (DHT11Start() == OK_RESPONSE)
+        {
+            DHT11ReceiveAndCheck();
+        }
+        OS_EXIT_CRITICAL();
+        OSTimeDly(3000);
     }
 }
 
 /**
  * @brief 实时在LED数码管上交替显示温度和湿度
- * 
+ * @attention 弃用DIG1和DIG2
  */
 void Task_Display(void *pdata)
 {
@@ -116,35 +132,35 @@ void Task_Display(void *pdata)
   
     while(1)
     {
-        if (cnt == 0)
+        if (cnt == 1)
         {
             OS_ENTER_CRITICAL();
             tmp = temperature;
             OS_EXIT_CRITICAL();
-            for(i = 4; i >= 1; i--)
+            for(i = 2; i >= 1; i--)
             {
                 tmparr[i-1] = tmp % 10;
                 tmp /= 10;
             }
         }     
-        else if (cnt == 100)
+        else if (cnt == 200)
         {
             OS_ENTER_CRITICAL();
             tmp = humidity;
             OS_EXIT_CRITICAL();
-            for(i = 4; i >= 1; i--)
+            for(i = 2; i >= 1; i--)
             {
                 tmparr[i-1] = tmp % 10;
                 tmp /= 10;
             }
         }
-        else if (cnt == 200) 
+        else if (cnt == 400)
             cnt = 0;
 
-        for(i = 1; i <= 4; i++)
+        for(i = 1; i <= 2; i++)
         {
             DisplayOneDigit(i, tmparr[i-1]);
-            OSTimeDly(60);
+            OSTimeDly(20);
         }
         cnt ++;
   }
@@ -173,22 +189,25 @@ int main(void)
     /* USER CODE END SysInit */
     /* Initialize all configured peripherals */
     MX_GPIO_Init();
+    MX_TIM3_Init();
     MX_USART1_UART_Init();
     /* USER CODE BEGIN 2 */
+    HAL_TIM_Base_Start(&htim3);
     for (cnt = 1; cnt <= 100; cnt++)
     {
         HAL_Delay(2000);
     }
     OSInit();
-  /* SysTick Frequency: 72MHz, time per beat: 0.5ms */
-    OS_CPU_SysTickInit(36000 - 1);    
-    OSTaskCreate(Task_Uart, (void *)0, (OS_STK *)&TASK_UART_STK[TASK_UART_STK_SIZE - 1], TASK_UART_PRIO);
+    /* SysTick Frequency: 72MHz, time per beat: 0.5ms */
+    OS_CPU_SysTickInit(36000 - 1);
+    //OSTaskCreate(Task_Uart, (void *)0, (OS_STK *)&TASK_UART_STK[TASK_UART_STK_SIZE - 1], TASK_UART_PRIO);
     OSTaskCreate(Task_DHT11Read, (void *)0, (OS_STK *)&TASK_DHT11READ_STK[TASK_DHT11READ_STK_SIZE - 1], TASK_DHT11READ_PRIO);
-    OSTaskCreate(Task_Display, (void *)0, (OS_STK *)TASK_DISPLAY_STK[TASK_DISPLAY_STK_SIZE - 1], TASK_DISPLAY_PRIO);
+    OSTaskCreate(Task_Display, (void *)0, (OS_STK *)&TASK_DISPLAY_STK[TASK_DISPLAY_STK_SIZE - 1], TASK_DISPLAY_PRIO);
+    
     OSStart();
-  /* USER CODE END 2 */
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
+    /* USER CODE END 2 */
+    /* Infinite loop */
+    /* USER CODE BEGIN WHILE */
     while (1)
     {
     /* USER CODE END WHILE */
@@ -232,6 +251,51 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief TIM3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM3_Init(void)
+{
+
+  /* USER CODE BEGIN TIM3_Init 0 */
+
+  /* USER CODE END TIM3_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM3_Init 1 */
+
+  /* USER CODE END TIM3_Init 1 */
+  htim3.Instance = TIM3;
+  htim3.Init.Prescaler = 36-1;
+  htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim3.Init.Period = 50000-1;
+  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim3, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM3_Init 2 */
+
+  /* USER CODE END TIM3_Init 2 */
+
 }
 
 /**
@@ -310,7 +374,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin : DHT11_DATA_Pin */
   GPIO_InitStruct.Pin = DHT11_DATA_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(DHT11_DATA_GPIO_Port, &GPIO_InitStruct);
 

@@ -2,9 +2,20 @@
  * @brief dht11.c所包含的头文件
  */
 
-#define MODE_INPUT      1
-#define MODE_OUTPUT     2
+#define MODE_INPUT          1
+#define MODE_OUTPUT         2
 
-void DHT11Start(void);
+#define OK_RESPONSE         1
+#define ERR_NORESPONSE      2
+#define ERR_CHECK           3
+#define OK_CHECK            4
+#define ERR_DATATIMEOUT     5
+
+#define MAX_WAIT_TIME       1000       
+
+typedef uint8_t DHT11State;
+
+DHT11State DHT11Start(void);
 void DHT11GPIOModeSwitch(uint8_t mode);
-void DHT11ReceiveAndCheck(void);
+DHT11State DHT11ReceiveAndCheck(void);
+void TIM3Delayus(uint16_t nus);

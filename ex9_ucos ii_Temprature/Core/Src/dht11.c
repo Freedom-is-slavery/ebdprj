@@ -35,6 +35,35 @@
 
 extern uint8_t temperature, humidity;
 extern uint8_t frac_hum, frac_temp;
+extern TIM_HandleTypeDef htim3;
+
+// /**
+//  * @brief 利用NOP进行微秒级延时
+//  * @param nus
+//  * 
+//  */
+// void DHT11Delayus(uint16_t nus)
+// {
+//     __IO uint32_t tmp = nus * HAL_RCC_GetHCLKFreq() / 1000000U;
+//     do
+//     {
+//         __NOP();
+//     } 
+//     while (tmp--);
+// }
+
+/**
+ * @brief 用定时器TIM3实现的微秒级延时
+ * @param nus
+ * @note nus不能超过49999
+ */
+void TIM3Delayus(uint16_t nus)
+{
+    __HAL_TIM_SET_COUNTER(&htim3, 0);
+    while (__HAL_TIM_GET_COUNTER(&htim3) < nus);
+}
+
+
 
 /**
  * @brief 主机GPIO模式切换
@@ -60,39 +89,46 @@ void DHT11GPIOModeSwitch(uint8_t mode)
  * @brief 
  * 
  * 主机发送低电平信号开始传输,维持20ms,
- * 随后主机拉高30us,切换至输入模式,DHT响应信号拉低后拉高,最后拉低代表数据传输开始
+ * 随后主机切换至输入模式,DHT响应信号拉低后拉高,最后拉低代表数据传输开始
  * 
  */
-void DHT11Start(void)
+DHT11State DHT11Start(void)
 {
-    /* GPIO Output Pull-up Mode, 拉低作为开始信号 */
+    /* GPIO Output Push Pull Mode, 拉低作为开始信号 */
+    DHT11GPIOModeSwitch(MODE_OUTPUT);
     HAL_GPIO_WritePin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin, RESET);
     /* 延迟20ms保证DHT11能检测到起始信号 */
-    HAL_Delay(2000);
-    HAL_GPIO_WritePin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin, SET);
+    TIM3Delayus(20000);
     DHT11GPIOModeSwitch(MODE_INPUT);
-    HAL_Delay(3);
-    while(HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) != RESET);
-    while(HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) != SET);
-    while(HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) != RESET);
+    /* 等待40us读DHT11的响应信号 */
+    TIM3Delayus(40);
+    if (HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) != GPIO_PIN_RESET)
+    {
+        return ERR_NORESPONSE;
+    }
+    while(HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) != GPIO_PIN_SET);
+    while(HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) != GPIO_PIN_RESET);
     /* 此时数据传输开始 */
+    return OK_RESPONSE;
 }
 
 /**
  * @brief 接收数据并作校验
  * @attention 高位先出
+ * @retval DHT11 tranmition state
  * 
  */
-void DHT11ReceiveAndCheck(void)
+DHT11State DHT11ReceiveAndCheck(void)
 {
     uint8_t cnt, tmp[5] = {0, 0, 0, 0, 0};
-    uint8_t status;
+    uint8_t status, tickstart;
     for (cnt = 1; cnt <= 40; cnt++)
     {
-        /* 时间上与上升沿对齐 */
-        while(HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) != SET);
-        HAL_Delay(3);
+        /* 与上升沿对齐 */
+        while(HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) != GPIO_PIN_SET);
+        
         /* 延迟30us以后还是高电平说明接收到'1', 低电平说明接收到'0' */
+        TIM3Delayus(30);
         status = HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin);
         if (cnt <= 8)
             tmp[0] |= (((uint8_t)status) << (8 - cnt));     //湿度整数字节
@@ -105,10 +141,15 @@ void DHT11ReceiveAndCheck(void)
         else
             tmp[4] |= (((uint8_t)status) << (40 - cnt));    //校验和
 
-        if (HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) == SET)
+        if (HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) == GPIO_PIN_SET)
         {   
             /* 针对读到'1'的情况 */
-            while(HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) != RESET);    
+            __HAL_TIM_SET_COUNTER(&htim3, 0);
+            while(HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) != GPIO_PIN_RESET)
+            {
+                if (__HAL_TIM_GET_COUNTER(&htim3) >= MAX_WAIT_TIME)
+                    return ERR_DATATIMEOUT;
+            }   
         }
     }
 
@@ -118,7 +159,11 @@ void DHT11ReceiveAndCheck(void)
         frac_hum = tmp[1];
         temperature = tmp[2];
         frac_temp = tmp[3];
+        return OK_CHECK;
     }
+    else
+        return ERR_CHECK;
+    
 }
 
 
