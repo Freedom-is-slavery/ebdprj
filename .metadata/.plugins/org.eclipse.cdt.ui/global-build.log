@@ -1,32 +1,6 @@
-17:25:59 **** Incremental Build of configuration Debug for project ex9_ucos ii_Temprature ****
-make -j8 all 
-arm-none-eabi-size   ex9_ucos\ ii_Temprature.elf 
-   text	   data	    bss	    dec	    hex	filename
-  16952	    104	  17264	  34320	   8610	ex9_ucos ii_Temprature.elf
-Finished building: default.size.stdout
- 
-17:26:08 **** Incremental Build of configuration Debug for project ex9_ucos ii_Temprature ****
-make -j8 all 
-arm-none-eabi-size   ex9_ucos\ ii_Temprature.elf 
-   text	   data	    bss	    dec	    hex	filename
-  16952	    104	  17264	  34320	   8610	ex9_ucos ii_Temprature.elf
-Finished building: default.size.stdout
- 
-17:27:25 **** Incremental Build of configuration Debug for project ex9_ucos ii_Temprature ****
-make -j8 all 
-arm-none-eabi-size   ex9_ucos\ ii_Temprature.elf 
-   text	   data	    bss	    dec	    hex	filename
-  16952	    104	  17264	  34320	   8610	ex9_ucos ii_Temprature.elf
-Finished building: default.size.stdout
- 
-17:58:24 **** Incremental Build of configuration Debug for project ex9_ucos ii_Temprature ****
+22:49:44 **** Incremental Build of configuration Debug for project ex9_ucos ii_Temprature ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core/Inc -I../ucos-ii/src -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../ucos-ii/port -I../ucos-ii/config -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/dht11.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core/Inc -I../ucos-ii/src -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../ucos-ii/port -I../ucos-ii/config -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/dht11.d" -MT"Core/Src/dht11.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/dht11.o"
-../Core/Src/main.c: In function 'Task_DHT11Read':
-../Core/Src/main.c:106:14: warning: unused variable 'cpu_sr' [-Wunused-variable]
-     uint16_t cpu_sr;
-              ^~~~~~
 arm-none-eabi-gcc -o "ex9_ucos ii_Temprature.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\admin\Desktop\STM32_test\ebdprj\ex9_ucos ii_Temprature\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ex9_ucos ii_Temprature.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: ex9_ucos ii_Temprature.elf
  
@@ -34,14 +8,21 @@ arm-none-eabi-objdump -h -S  ex9_ucos\ ii_Temprature.elf  > "ex9_ucos ii_Temprat
 arm-none-eabi-objcopy  -O binary  ex9_ucos\ ii_Temprature.elf  "ex9_ucos ii_Temprature.bin"
 arm-none-eabi-size   ex9_ucos\ ii_Temprature.elf 
    text	   data	    bss	    dec	    hex	filename
-  16940	    104	  17264	  34308	   8604	ex9_ucos ii_Temprature.elf
+  18716	    136	  17728	  36580	   8ee4	ex9_ucos ii_Temprature.elf
 Finished building: default.size.stdout
  
 Finished building: ex9_ucos ii_Temprature.bin
  
 Finished building: ex9_ucos ii_Temprature.list
  
-23:26:23 **** Clean-only build of configuration Debug for project ex9_ucos ii_Temprature ****
+22:49:54 **** Incremental Build of configuration Debug for project ex9_ucos ii_Temprature ****
+make -j8 all 
+arm-none-eabi-size   ex9_ucos\ ii_Temprature.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18716	    136	  17728	  36580	   8ee4	ex9_ucos ii_Temprature.elf
+Finished building: default.size.stdout
+ 
+23:01:17 **** Clean-only build of configuration Debug for project ex9_ucos ii_Temprature ****
 make -j8 clean 
 rm -rf *
  

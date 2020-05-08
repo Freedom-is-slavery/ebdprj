@@ -1,7 +1,7 @@
-23:26:23 **** Clean-only build of configuration Debug for project ex9_ucos ii_Temprature ****
+23:01:17 **** Clean-only build of configuration Debug for project ex9_ucos ii_Temprature ****
 make -j8 clean 
 rm -rf *
  
 
-23:26:24 Build Finished. 0 errors, 0 warnings. (took 1s.627ms)
+23:01:19 Build Finished. 0 errors, 0 warnings. (took 1s.165ms)
 

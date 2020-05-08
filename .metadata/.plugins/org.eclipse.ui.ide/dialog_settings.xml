@@ -16,6 +16,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\admin\Desktop\STM32_test\ebdprj\ex9_ucos ii_Temprature"/>
 			<item value="C:\Users\admin\Desktop\STM32_test\STM32F103"/>
 			<item value="C:\Users\admin\Desktop\STM32_test\ebdprj\ex7_BootLoader"/>
 			<item value="C:\Users\admin\Desktop\STM32_test\ebdprj\LED"/>
