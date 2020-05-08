@@ -10,8 +10,10 @@
 #define ERR_CHECK           3
 #define OK_CHECK            4
 #define ERR_DATATIMEOUT     5
+#define ERR_BUSBUSY         6
+#define ERR_RESPONSETIMING  7
 
-#define MAX_WAIT_TIME       1000       
+#define MAX_WAIT_TIME       500       
 
 typedef uint8_t DHT11State;
 
