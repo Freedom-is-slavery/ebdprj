@@ -1,0 +1,7 @@
+23:00:02 **** Clean-only build of configuration Debug for project ex10_freertos_temperature ****
+make -j8 clean 
+rm -rf *
+ 
+
+23:00:04 Build Finished. 0 errors, 0 warnings. (took 2s.0ms)
+

@@ -16279,3 +16279,755 @@ Round
 2020-05-09 20:18:44,132 [INFO] IPUIPlugin:65 - create IPUIPlugin
 2020-05-09 20:18:44,312 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] toolchainItems.length=====1
 2020-05-09 20:18:44,443 [INFO] OpenFileManager:294 - Restore cursor
+2020-05-09 20:21:30,831 [INFO] Activator:176 - 
+
+
+2020-05-09 20:21:30,833 [INFO] Activator:177 - !SESSION log4j initialized
+2020-05-09 20:23:30,713 [INFO] ApplicationProperties:181 - Using Application install path: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303
+2020-05-09 20:23:30,723 [INFO] DbMcusXml:72 - Set database path to: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303\\db\/mcu/
+2020-05-09 20:23:30,727 [INFO] DbBoardsPdsc:54 - Set plugin database path to: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303\\db\/plugins/boardmanager/
+2020-05-09 20:23:30,727 [INFO] DbMcus:235 - Set plugin images path to: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303\\db\/plugins/mcufinder/images/
+2020-05-09 20:23:30,727 [INFO] DbBoards:232 - Set plugin images path to: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303\\db\/plugins/mcufinder/images/
+2020-05-09 20:23:30,731 [INFO] DbMcusAds:85 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/
+2020-05-09 20:23:30,732 [INFO] DbMcusDocs:108 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/
+2020-05-09 20:23:30,734 [INFO] DbMcusJson:61 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/
+2020-05-09 20:23:30,735 [INFO] DbBoardsDocs:97 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/
+2020-05-09 20:23:30,736 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/
+2020-05-09 20:23:30,754 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/cs/
+2020-05-09 20:23:30,843 [INFO] RulesReader:52 - Compatibility file has been processed (208 Rules)
+2020-05-09 20:23:30,940 [INFO] MicroXplorer:570 - Detected Java Version = 1.8.0_242
+2020-05-09 20:23:30,941 [INFO] DbMcusXml:72 - Set database path to: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303\\db\/mcu/
+2020-05-09 20:23:30,941 [INFO] DbBoardsPdsc:54 - Set plugin database path to: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303\\db\/plugins/boardmanager/
+2020-05-09 20:23:30,941 [INFO] DbMcus:235 - Set plugin images path to: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303\\db\/plugins/mcufinder/images/
+2020-05-09 20:23:30,942 [INFO] DbBoards:232 - Set plugin images path to: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303\\db\/plugins/mcufinder/images/
+2020-05-09 20:23:30,942 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\admin\.stmcufinder\plugins\mcufinder/ => C:\Users\admin\.stmcufinder\plugins\mcufinder
+2020-05-09 20:23:30,943 [INFO] DbMcusAds:85 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/
+2020-05-09 20:23:30,943 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\admin\.stmcufinder\plugins\mcufinder/ => C:\Users\admin\.stmcufinder\plugins\mcufinder
+2020-05-09 20:23:30,943 [INFO] DbMcusDocs:108 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/
+2020-05-09 20:23:30,943 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\admin\.stmcufinder\plugins\mcufinder/ => C:\Users\admin\.stmcufinder\plugins\mcufinder
+2020-05-09 20:23:30,943 [INFO] DbMcusJson:61 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/
+2020-05-09 20:23:30,943 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\admin\.stmcufinder\plugins\mcufinder/ => C:\Users\admin\.stmcufinder\plugins\mcufinder
+2020-05-09 20:23:30,943 [INFO] DbBoardsDocs:97 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/
+2020-05-09 20:23:30,944 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\admin\.stmcufinder\plugins\mcufinder/ => C:\Users\admin\.stmcufinder\plugins\mcufinder
+2020-05-09 20:23:30,944 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/
+2020-05-09 20:23:30,944 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\admin\.stmcufinder\plugins\mcufinder/ => C:\Users\admin\.stmcufinder\plugins\mcufinder
+2020-05-09 20:23:30,944 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\admin\.stmcufinder\plugins\mcufinder/ => C:\Users\admin\.stmcufinder\plugins\mcufinder
+2020-05-09 20:23:30,944 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/cs/
+2020-05-09 20:23:31,015 [INFO] MainPanel:181 - HeapMemory: 288358400
+2020-05-09 20:23:31,077 [INFO] DbMcusXml:72 - Set database path to: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303\\db\/mcu/
+2020-05-09 20:23:31,077 [INFO] DbBoardsPdsc:54 - Set plugin database path to: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303\\db\/plugins/boardmanager/
+2020-05-09 20:23:31,077 [INFO] DbMcus:235 - Set plugin images path to: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303\\db\/plugins/mcufinder/images/
+2020-05-09 20:23:31,077 [INFO] DbBoards:232 - Set plugin images path to: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303\\db\/plugins/mcufinder/images/
+2020-05-09 20:23:31,078 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\admin\.stmcufinder\plugins\mcufinder/ => C:\Users\admin\.stmcufinder\plugins\mcufinder
+2020-05-09 20:23:31,078 [INFO] DbMcusAds:85 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/
+2020-05-09 20:23:31,078 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\admin\.stmcufinder\plugins\mcufinder/ => C:\Users\admin\.stmcufinder\plugins\mcufinder
+2020-05-09 20:23:31,078 [INFO] DbMcusDocs:108 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/
+2020-05-09 20:23:31,078 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\admin\.stmcufinder\plugins\mcufinder/ => C:\Users\admin\.stmcufinder\plugins\mcufinder
+2020-05-09 20:23:31,079 [INFO] DbMcusJson:61 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/
+2020-05-09 20:23:31,079 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\admin\.stmcufinder\plugins\mcufinder/ => C:\Users\admin\.stmcufinder\plugins\mcufinder
+2020-05-09 20:23:31,079 [INFO] DbBoardsDocs:97 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/
+2020-05-09 20:23:31,079 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\admin\.stmcufinder\plugins\mcufinder/ => C:\Users\admin\.stmcufinder\plugins\mcufinder
+2020-05-09 20:23:31,079 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/
+2020-05-09 20:23:31,079 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\admin\.stmcufinder\plugins\mcufinder/ => C:\Users\admin\.stmcufinder\plugins\mcufinder
+2020-05-09 20:23:31,080 [WARN] DbFile:36 - Overriding database path with different value: C:\Users\admin\.stmcufinder\plugins\mcufinder/ => C:\Users\admin\.stmcufinder\plugins\mcufinder
+2020-05-09 20:23:31,080 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\admin\.stmcufinder\plugins\mcufinder//mcu/cs/
+2020-05-09 20:23:31,100 [INFO] ApplicationProperties:181 - Using Application install path: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303
+2020-05-09 20:23:31,102 [INFO] PluginManage:178 - Search for loadable plugins [exclusion list=, tutovideos]
+2020-05-09 20:23:31,103 [INFO] PluginManage:292 - Check plugin analytics
+2020-05-09 20:23:31,109 [INFO] PluginManage:342 - Loaded plugin analytics (category:tool,tabindex:-1)
+2020-05-09 20:23:31,109 [INFO] PluginManage:292 - Check plugin clock
+2020-05-09 20:23:31,118 [INFO] PluginManage:342 - Loaded plugin clock (category:base,tabindex:2)
+2020-05-09 20:23:31,119 [INFO] PluginManage:292 - Check plugin ddr
+2020-05-09 20:23:31,121 [INFO] PluginManage:342 - Loaded plugin ddr (category:tool,tabindex:6)
+2020-05-09 20:23:31,121 [INFO] PluginManage:292 - Check plugin filemanager
+2020-05-09 20:23:31,228 [INFO] PluginManage:342 - Loaded plugin filemanager (category:base,tabindex:10)
+2020-05-09 20:23:31,228 [INFO] PluginManage:292 - Check plugin ipmanager
+2020-05-09 20:23:31,238 [INFO] PluginManage:342 - Loaded plugin ipmanager (category:base,tabindex:5)
+2020-05-09 20:23:31,238 [INFO] PluginManage:292 - Check plugin pinoutandconfiguration
+2020-05-09 20:23:31,246 [INFO] PluginManage:342 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2020-05-09 20:23:31,246 [INFO] PluginManage:292 - Check plugin pinoutconfig
+2020-05-09 20:23:31,269 [INFO] PluginManage:342 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2020-05-09 20:23:31,270 [INFO] PluginManage:292 - Check plugin power
+2020-05-09 20:23:31,276 [INFO] PluginManage:342 - Loaded plugin power (category:power,tabindex:4)
+2020-05-09 20:23:31,276 [INFO] PluginManage:292 - Check plugin projectmanager
+2020-05-09 20:23:31,291 [INFO] PluginManage:342 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2020-05-09 20:23:31,291 [INFO] PluginManage:292 - Check plugin thirdparty
+2020-05-09 20:23:31,328 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/admin/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 15 ms. number of Sw pack : 11
+2020-05-09 20:23:31,347 [INFO] PluginManage:342 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2020-05-09 20:23:31,347 [INFO] PluginManage:292 - Check plugin tools
+2020-05-09 20:23:31,349 [INFO] PluginManage:342 - Loaded plugin tools (category:base,tabindex:7)
+2020-05-09 20:23:31,350 [INFO] PluginManage:292 - Check plugin tutovideos
+2020-05-09 20:23:31,350 [INFO] PluginManage:347 - Ignore plugin tutovideos (category:base)
+2020-05-09 20:23:31,350 [INFO] PluginManage:292 - Check plugin updater
+2020-05-09 20:23:31,362 [INFO] PluginManage:342 - Loaded plugin updater (category:base,tabindex:12)
+2020-05-09 20:23:31,363 [INFO] PluginManage:265 - PluginManage : Loaded plugins [12]
+2020-05-09 20:23:31,534 [INFO] PinOutPanel:1420 - setPackage(No Configuration,No Configuration)
+2020-05-09 20:23:31,619 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,619 [INFO] PluginManager:200 - loadIPPluginJar : add adc
+2020-05-09 20:23:31,621 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,622 [INFO] PluginManager:200 - loadIPPluginJar : add aes
+2020-05-09 20:23:31,624 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,624 [INFO] PluginManager:200 - loadIPPluginJar : add can
+2020-05-09 20:23:31,625 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,625 [INFO] PluginManager:200 - loadIPPluginJar : add comp
+2020-05-09 20:23:31,627 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,628 [INFO] PluginManager:200 - loadIPPluginJar : add cryp
+2020-05-09 20:23:31,629 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,630 [INFO] PluginManager:200 - loadIPPluginJar : add dfsdm
+2020-05-09 20:23:31,634 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,635 [INFO] PluginManager:200 - loadIPPluginJar : add dma
+2020-05-09 20:23:31,636 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,636 [INFO] PluginManager:200 - loadIPPluginJar : add fatfs
+2020-05-09 20:23:31,640 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,640 [INFO] PluginManager:200 - loadIPPluginJar : add fmc
+2020-05-09 20:23:31,645 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,646 [INFO] PluginManager:200 - loadIPPluginJar : add freertos
+2020-05-09 20:23:31,647 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,647 [INFO] PluginManager:200 - loadIPPluginJar : add genericplugin
+2020-05-09 20:23:31,649 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,649 [INFO] PluginManager:200 - loadIPPluginJar : add gfxmmu
+2020-05-09 20:23:31,654 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,654 [INFO] PluginManager:200 - loadIPPluginJar : add gic
+2020-05-09 20:23:31,658 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,658 [INFO] PluginManager:200 - loadIPPluginJar : add gpio
+2020-05-09 20:23:31,660 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,660 [INFO] PluginManager:200 - loadIPPluginJar : add gtzc
+2020-05-09 20:23:31,663 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,663 [INFO] PluginManager:200 - loadIPPluginJar : add hash
+2020-05-09 20:23:31,665 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,666 [INFO] PluginManager:200 - loadIPPluginJar : add i2c
+2020-05-09 20:23:31,707 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,707 [INFO] PluginManager:200 - loadIPPluginJar : add i2s
+2020-05-09 20:23:31,710 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,710 [INFO] PluginManager:200 - loadIPPluginJar : add ipddr
+2020-05-09 20:23:31,712 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,712 [INFO] PluginManager:200 - loadIPPluginJar : add ltdc
+2020-05-09 20:23:31,715 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,715 [INFO] PluginManager:200 - loadIPPluginJar : add mdma
+2020-05-09 20:23:31,718 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,718 [INFO] PluginManager:200 - loadIPPluginJar : add nvic
+2020-05-09 20:23:31,720 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,720 [INFO] PluginManager:200 - loadIPPluginJar : add opamp
+2020-05-09 20:23:31,723 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,723 [INFO] PluginManager:200 - loadIPPluginJar : add pdm2pcm
+2020-05-09 20:23:31,729 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,732 [INFO] PluginManager:200 - loadIPPluginJar : add plateformsettings
+2020-05-09 20:23:31,734 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,734 [INFO] PluginManager:200 - loadIPPluginJar : add quadspi
+2020-05-09 20:23:31,737 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,737 [INFO] PluginManager:200 - loadIPPluginJar : add resmgrutility
+2020-05-09 20:23:31,740 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,740 [INFO] PluginManager:200 - loadIPPluginJar : add sai
+2020-05-09 20:23:31,743 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,743 [INFO] PluginManager:200 - loadIPPluginJar : add spi
+2020-05-09 20:23:31,746 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,747 [INFO] PluginManager:200 - loadIPPluginJar : add stm32_wpan
+2020-05-09 20:23:31,748 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,748 [INFO] PluginManager:200 - loadIPPluginJar : add tim
+2020-05-09 20:23:31,751 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,752 [INFO] PluginManager:200 - loadIPPluginJar : add touchsensing
+2020-05-09 20:23:31,753 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,754 [INFO] PluginManager:200 - loadIPPluginJar : add tracer_emb
+2020-05-09 20:23:31,755 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,755 [INFO] PluginManager:200 - loadIPPluginJar : add ts
+2020-05-09 20:23:31,757 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,757 [INFO] PluginManager:200 - loadIPPluginJar : add tsc
+2020-05-09 20:23:31,759 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,759 [INFO] PluginManager:200 - loadIPPluginJar : add ucpd
+2020-05-09 20:23:31,761 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:23:31,762 [INFO] PluginManager:200 - loadIPPluginJar : add usart
+2020-05-09 20:23:32,472 [INFO] BoardConnectionPanel:3472 - [DDR PANEL] STM32CubeIDE environment
+2020-05-09 20:23:32,472 [INFO] MainDdrPanel:103 - [DDR PANEL] GETTER - cubeProgrammerPath is: null
+2020-05-09 20:23:32,638 [FATAL] Updater:277 - Updater called before beeing initialized
+2020-05-09 20:23:32,823 [FATAL] Updater:277 - Updater called before beeing initialized
+2020-05-09 20:23:32,826 [INFO] PinOutPanel:1420 - setPackage(No Configuration,No Configuration)
+2020-05-09 20:23:32,827 [FATAL] Updater:277 - Updater called before beeing initialized
+2020-05-09 20:23:32,830 [INFO] BoardConnectionPanel:3472 - [DDR PANEL] STM32CubeIDE environment
+2020-05-09 20:23:32,830 [INFO] MainDdrPanel:103 - [DDR PANEL] GETTER - cubeProgrammerPath is: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_1.3.0.202002181050\tools\bin
+2020-05-09 20:23:32,835 [INFO] ProgrammerExecThread:148 - [ProgrammerAPI] CubeProgrammer command construction: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_1.3.0.202002181050\tools\bin\STM32_Programmer_CLI.exe -l
+2020-05-09 20:23:33,036 [INFO] MainDdrPanel:93 - [DDR PANEL] SETTER - Set cubeProgrammerPath to: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_1.3.0.202002181050\tools\bin
+2020-05-09 20:23:33,039 [INFO] Updater:886 - Updater Version found : 5.6.1
+2020-05-09 20:23:33,055 [INFO] ApplicationProperties:181 - Using Application install path: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303
+2020-05-09 20:23:33,203 [INFO] MainUpdater:2230 - connection check result : 10
+2020-05-09 20:23:33,204 [INFO] MainUpdater:236 - Updater Check For Update Now.
+2020-05-09 20:23:33,205 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.60
+2020-05-09 20:23:33,240 [INFO] CheckServerUpdateThread:92 - End of CheckServer Thread
+2020-05-09 20:23:33,409 [INFO] MainUpdater:2230 - connection check result : 10
+2020-05-09 20:23:33,411 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Successfull proxy connection.
+2020-05-09 20:23:33,745 [INFO] McuFinderGlobals:40 - Set McuFinder mode to 2 (CubeIDE integrated)
+2020-05-09 20:23:33,767 [INFO] FinderPluginLoader:86 - Searching for filters in installed packs
+2020-05-09 20:23:33,768 [INFO] DbMcusXml:110 - Load MCU database from D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303\\db\/mcu/families.xml
+2020-05-09 20:23:34,412 [INFO] ThirdPartyDb:261 - Close Third Party DataBase File (C:/Users/admin/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
+2020-05-09 20:23:34,476 [INFO] IntegrityCheckThread:98 - End integrity checks thread
+2020-05-09 20:23:34,768 [INFO] DbMcusJson:90 - JSON generation date=Wed Apr 15 13:54:18 GMT+08:00 2020 (1586930058)
+2020-05-09 20:23:35,483 [INFO] DbMcus:171 - Found 1670 MCUs (1625 are supported by CubeMX, 1625 are visible in CubeMX)
+2020-05-09 20:23:35,485 [INFO] ApiDb:158 - Load user favorites file C:\Users\admin/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2020-05-09 20:23:35,485 [INFO] ApiDb:163 - User favorites MCUs=[]
+2020-05-09 20:23:35,485 [INFO] DbMcus:183 - Set 0 / 0 favorites MCUs
+2020-05-09 20:23:36,365 [INFO] DbMcusAds:143 - JSON generation date=Thu Apr 30 21:50:56 GMT+08:00 2020 (1588254656)
+2020-05-09 20:23:36,368 [INFO] LoadUrlFilesThread:161 - End of LoadServerUrlFiles without Thread
+2020-05-09 20:23:36,410 [INFO] McuDetailPanel:181 - Set advertising image to C:/Users/admin/STM32Cube/Repository/\PR_STM32Cube_GitHub_0320_V1.png
+2020-05-09 20:23:38,263 [INFO] ServerAccessManage:348 - Download File mcusAds.json._tmp_
+2020-05-09 20:23:38,282 [INFO] LoadUrlFilesThread:134 - End of LoadUrlFiles Thread
+2020-05-09 20:23:39,220 [INFO] ServerAccessManage:348 - Download File mcusDocs.json._tmp_
+2020-05-09 20:23:40,255 [INFO] LoadUrlFilesThread:134 - End of LoadUrlFiles Thread
+2020-05-09 20:23:40,701 [INFO] ServerAccessManage:348 - Download File mcusFeaturesAndDescription.json._tmp_
+2020-05-09 20:24:34,775 [INFO] LoadUrlFilesThread:134 - End of LoadUrlFiles Thread
+2020-05-09 20:24:35,703 [INFO] ServerAccessManage:348 - Download File boardsDocs.json._tmp_
+2020-05-09 20:24:37,904 [INFO] LoadUrlFilesThread:134 - End of LoadUrlFiles Thread
+2020-05-09 20:24:38,482 [INFO] ServerAccessManage:348 - Download File boards.json._tmp_
+2020-05-09 20:24:45,737 [INFO] LoadUrlFilesThread:134 - End of LoadUrlFiles Thread
+2020-05-09 20:24:47,227 [INFO] ServerAccessManage:348 - Download File crdb.zip
+2020-05-09 20:24:52,233 [INFO] FileExtend:225 - Unzip File : crdb.zip
+2020-05-09 20:24:52,237 [INFO] FileExtend:240 - Standard Zip Deflate
+2020-05-09 20:24:52,270 [INFO] LoadUrlFilesThread:134 - End of LoadUrlFiles Thread
+2020-05-09 20:24:52,272 [INFO] DbMcusAds:143 - JSON generation date=Thu Apr 30 21:50:56 GMT+08:00 2020 (1588254656)
+2020-05-09 20:24:52,277 [INFO] DbMcusDocs:142 - JSON generation date=Thu Apr 16 22:39:08 GMT+08:00 2020 (1587047948)
+2020-05-09 20:24:52,459 [INFO] DbMcusDocs:77 - Found 563 MCUs documents
+2020-05-09 20:24:52,463 [INFO] ApiDb:186 - Save user favorites file C:\Users\admin/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2020-05-09 20:24:52,463 [INFO] ApiDb:191 - User favorites MCUs=[]
+2020-05-09 20:24:52,463 [INFO] DbMcusXml:110 - Load MCU database from D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303\\db\/mcu/families.xml
+2020-05-09 20:24:52,955 [INFO] DbMcusJson:90 - JSON generation date=Wed Apr 15 13:54:18 GMT+08:00 2020 (1586930058)
+2020-05-09 20:24:53,705 [INFO] DbMcus:171 - Found 1670 MCUs (1625 are supported by CubeMX, 1625 are visible in CubeMX)
+2020-05-09 20:24:53,705 [INFO] ApiDb:158 - Load user favorites file C:\Users\admin/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2020-05-09 20:24:53,706 [INFO] ApiDb:163 - User favorites MCUs=[]
+2020-05-09 20:24:53,706 [INFO] DbMcus:183 - Set 0 / 0 favorites MCUs
+2020-05-09 20:24:53,775 [INFO] McuFilterPanel:249 - Update 0 favorites MCUs
+2020-05-09 20:24:54,018 [INFO] DbBoardsDocs:131 - JSON generation date=Wed Apr 15 13:54:18 GMT+08:00 2020 (1586930058)
+2020-05-09 20:24:54,147 [INFO] DbBoardsPdsc:92 - Found 22 items
+2020-05-09 20:24:54,166 [INFO] DbBoardsPdsc:92 - Found 9 items
+2020-05-09 20:24:54,190 [INFO] DbBoardsPdsc:92 - Found 28 items
+2020-05-09 20:24:54,205 [INFO] DbBoardsPdsc:92 - Found 1 items
+2020-05-09 20:24:54,255 [INFO] DbBoardsPdsc:92 - Found 40 items
+2020-05-09 20:24:54,282 [INFO] DbBoardsPdsc:92 - Found 39 items
+2020-05-09 20:24:54,304 [INFO] DbBoardsPdsc:92 - Found 2 items
+2020-05-09 20:24:54,319 [INFO] DbBoardsPdsc:92 - Found 4 items
+2020-05-09 20:24:54,341 [WARN] DbBoardsPdsc:256 - Board STM32H7B3I-DK: unknown feature type=Audio, name=, username=Audio stereo codec with Headphone Amp (CS42L51-CNZ), n=1
+2020-05-09 20:24:54,341 [WARN] DbBoardsPdsc:256 - Board STM32H7B3I-DK: unknown feature type=WIFI, name=, username=WIFI 802.11 b/g/n, n=1
+2020-05-09 20:24:54,343 [WARN] DbBoardsPdsc:256 - Board STM32H7B3I-EVAL: unknown feature type=Audio, name=, username=Multi-Channel Audio Codec (CS42L51-CNZ), n=1
+2020-05-09 20:24:54,343 [WARN] DbBoardsPdsc:256 - Board STM32H7B3I-EVAL: unknown feature type=Meter, name=, username=Power-metering and Temperature-monitoring with sigma-delta modulators, n=1
+2020-05-09 20:24:54,343 [WARN] DbBoardsPdsc:256 - Board STM32H7B3I-EVAL: unknown feature type=WIFI, name=, username=WIFI 802.11 a/b/g/n, n=1
+2020-05-09 20:24:54,343 [WARN] DbBoardsPdsc:256 - Board STM32H7B3I-EVAL: unknown feature type=Motor, name=, username=Motor Control, n=1
+2020-05-09 20:24:54,355 [INFO] DbBoardsJson:80 - JSON generation date=Tue Feb 11 21:53:55 GMT+08:00 2020 (1581429235)
+2020-05-09 20:24:54,362 [INFO] DbBoards:120 - Found 145 boards (142 are supported by CubeMX)
+2020-05-09 20:24:54,369 [INFO] DbBoardsDocs:131 - JSON generation date=Wed Apr 15 13:54:18 GMT+08:00 2020 (1586930058)
+2020-05-09 20:24:54,376 [INFO] DbBoardsDocs:70 - Found 157 boards documents
+2020-05-09 20:24:54,380 [WARN] DbBoards:130 - board NUCLEO-H743ZI2 has no document id list !
+2020-05-09 20:24:54,381 [WARN] DbBoards:130 - board NUCLEO-L4P5ZG has no document id list !
+2020-05-09 20:24:54,382 [WARN] DbBoards:130 - board P-NUCLEO-WB55-Nucleo has no document id list !
+2020-05-09 20:24:54,382 [WARN] DbBoards:130 - board P-NUCLEO-WB55-USBDongle has no document id list !
+2020-05-09 20:24:54,383 [WARN] DbBoards:130 - board NUCLEO-WB35CE has no document id list !
+2020-05-09 20:24:54,383 [WARN] DbBoards:130 - board STM32F401C-DISCO has no document id list !
+2020-05-09 20:24:54,384 [WARN] DbBoards:130 - board STM32F769I-DISC1 has no document id list !
+2020-05-09 20:24:54,384 [WARN] DbBoards:152 - board STM32F723E-DISCO / document id not found: 4598
+2020-05-09 20:24:54,384 [WARN] DbBoards:130 - board STM32L-DISCOVERY has no document id list !
+2020-05-09 20:24:54,384 [WARN] DbBoards:152 - board STM32L496G-DISCO / document id not found: 4598
+2020-05-09 20:24:54,385 [WARN] DbBoards:152 - board STM32H747I-DISCO / document id not found: 4598
+2020-05-09 20:24:54,385 [WARN] DbBoards:130 - board STM32H747I-DISC1 has no document id list !
+2020-05-09 20:24:54,385 [WARN] DbBoards:152 - board STM32H745I-DISCO / document id not found: 4598
+2020-05-09 20:24:54,385 [WARN] DbBoards:152 - board STM32H750B-DK / document id not found: 4598
+2020-05-09 20:24:54,386 [WARN] DbBoards:152 - board STM32H7B3I-DK / document id not found: 4598
+2020-05-09 20:24:54,386 [WARN] DbBoards:152 - board STM32L4R9I-DISCO / document id not found: 4598
+2020-05-09 20:24:54,386 [WARN] DbBoards:130 - board STM32MP157A-DK1 has no document id list !
+2020-05-09 20:24:54,386 [WARN] DbBoards:152 - board STM32L562E-DK / document id not found: 4598
+2020-05-09 20:24:54,387 [WARN] DbBoards:130 - board STM32L4P5G-DK has no document id list !
+2020-05-09 20:24:54,387 [WARN] DbBoards:130 - board STM32091C-EVAL has no document id list !
+2020-05-09 20:24:54,387 [WARN] DbBoards:130 - board STM3210C-EVAL has no document id list !
+2020-05-09 20:24:54,387 [WARN] DbBoards:130 - board STM32100E-EVAL has no document id list !
+2020-05-09 20:24:54,387 [WARN] DbBoards:130 - board STM3221G-EVAL has no document id list !
+2020-05-09 20:24:54,387 [WARN] DbBoards:130 - board STM32303C-EVAL has no document id list !
+2020-05-09 20:24:54,387 [WARN] DbBoards:130 - board STM32L152D-EVAL has no document id list !
+2020-05-09 20:24:54,387 [WARN] DbBoards:130 - board STM32746G-EVAL2 has no document id list !
+2020-05-09 20:24:54,387 [WARN] DbBoards:130 - board STM32F779I-EVAL has no document id list !
+2020-05-09 20:24:54,388 [WARN] DbBoards:130 - board STM32479I-EVAL has no document id list !
+2020-05-09 20:24:54,388 [WARN] DbBoards:130 - board STM32H743I-EVAL2 has no document id list !
+2020-05-09 20:24:54,388 [WARN] DbBoards:152 - board STM32H7B3I-EVAL / document id not found: 4596
+2020-05-09 20:24:54,388 [WARN] DbBoards:130 - board STM32H753I-EVAL2 has no document id list !
+2020-05-09 20:24:54,388 [WARN] DbBoards:130 - board STM32G474E-EVAL1 has no document id list !
+2020-05-09 20:24:54,388 [WARN] DbBoards:130 - board STEVAL-BFA001V1B has no document id list !
+2020-05-09 20:24:54,389 [WARN] DbBoards:130 - board STEVAL-BFA001V2B has no document id list !
+2020-05-09 20:24:54,389 [WARN] DbBoards:130 - board STEVAL-MKSBOX1V1 has no document id list !
+2020-05-09 20:24:54,389 [WARN] DbBoards:130 - board STEVAL-STWINKT1 has no document id list !
+2020-05-09 20:24:54,389 [WARN] DbBoards:130 - board STEVAL-IDP005V1 has no document id list !
+2020-05-09 20:24:54,389 [WARN] DbBoards:130 - board STEVAL-IDP005V2 has no document id list !
+2020-05-09 20:24:57,030 [INFO] ApiDb:158 - Load user favorites file C:\Users\admin/.stm32cubeide/favorites.boards.txt: 0 item(s)
+2020-05-09 20:24:57,030 [INFO] ApiDb:163 - User favorites Boards=[]
+2020-05-09 20:24:57,030 [INFO] DbBoards:209 - Set 0 / 0 favorites Boards
+2020-05-09 20:24:57,038 [INFO] DbBoardsDocs:70 - Found 314 boards documents
+2020-05-09 20:24:57,039 [INFO] ApiDb:186 - Save user favorites file C:\Users\admin/.stm32cubeide/favorites.boards.txt: 0 item(s)
+2020-05-09 20:24:57,039 [INFO] ApiDb:191 - User favorites Boards=[]
+2020-05-09 20:24:57,042 [INFO] DbBoardsPdsc:92 - Found 22 items
+2020-05-09 20:24:57,044 [INFO] DbBoardsPdsc:92 - Found 9 items
+2020-05-09 20:24:57,047 [INFO] DbBoardsPdsc:92 - Found 28 items
+2020-05-09 20:24:57,048 [INFO] DbBoardsPdsc:92 - Found 1 items
+2020-05-09 20:24:57,052 [INFO] DbBoardsPdsc:92 - Found 40 items
+2020-05-09 20:24:57,056 [INFO] DbBoardsPdsc:92 - Found 39 items
+2020-05-09 20:24:57,057 [INFO] DbBoardsPdsc:92 - Found 2 items
+2020-05-09 20:24:57,058 [INFO] DbBoardsPdsc:92 - Found 4 items
+2020-05-09 20:24:57,061 [WARN] DbBoardsPdsc:256 - Board STM32H7B3I-DK: unknown feature type=Audio, name=, username=Audio stereo codec with Headphone Amp (CS42L51-CNZ), n=1
+2020-05-09 20:24:57,061 [WARN] DbBoardsPdsc:256 - Board STM32H7B3I-DK: unknown feature type=WIFI, name=, username=WIFI 802.11 b/g/n, n=1
+2020-05-09 20:24:57,063 [WARN] DbBoardsPdsc:256 - Board STM32H7B3I-EVAL: unknown feature type=Audio, name=, username=Multi-Channel Audio Codec (CS42L51-CNZ), n=1
+2020-05-09 20:24:57,064 [WARN] DbBoardsPdsc:256 - Board STM32H7B3I-EVAL: unknown feature type=Meter, name=, username=Power-metering and Temperature-monitoring with sigma-delta modulators, n=1
+2020-05-09 20:24:57,064 [WARN] DbBoardsPdsc:256 - Board STM32H7B3I-EVAL: unknown feature type=WIFI, name=, username=WIFI 802.11 a/b/g/n, n=1
+2020-05-09 20:24:57,064 [WARN] DbBoardsPdsc:256 - Board STM32H7B3I-EVAL: unknown feature type=Motor, name=, username=Motor Control, n=1
+2020-05-09 20:24:57,075 [INFO] DbBoardsJson:80 - JSON generation date=Tue Feb 11 21:53:55 GMT+08:00 2020 (1581429235)
+2020-05-09 20:24:57,079 [INFO] DbBoards:120 - Found 145 boards (142 are supported by CubeMX)
+2020-05-09 20:24:57,080 [WARN] DbBoards:130 - board NUCLEO-H743ZI2 has no document id list !
+2020-05-09 20:24:57,080 [WARN] DbBoards:130 - board NUCLEO-L4P5ZG has no document id list !
+2020-05-09 20:24:57,081 [WARN] DbBoards:130 - board P-NUCLEO-WB55-Nucleo has no document id list !
+2020-05-09 20:24:57,081 [WARN] DbBoards:130 - board P-NUCLEO-WB55-USBDongle has no document id list !
+2020-05-09 20:24:57,081 [WARN] DbBoards:130 - board NUCLEO-WB35CE has no document id list !
+2020-05-09 20:24:57,081 [WARN] DbBoards:130 - board STM32F401C-DISCO has no document id list !
+2020-05-09 20:24:57,081 [WARN] DbBoards:130 - board STM32F769I-DISC1 has no document id list !
+2020-05-09 20:24:57,082 [WARN] DbBoards:152 - board STM32F723E-DISCO / document id not found: 4598
+2020-05-09 20:24:57,082 [WARN] DbBoards:130 - board STM32L-DISCOVERY has no document id list !
+2020-05-09 20:24:57,082 [WARN] DbBoards:152 - board STM32L496G-DISCO / document id not found: 4598
+2020-05-09 20:24:57,082 [WARN] DbBoards:152 - board STM32H747I-DISCO / document id not found: 4598
+2020-05-09 20:24:57,082 [WARN] DbBoards:130 - board STM32H747I-DISC1 has no document id list !
+2020-05-09 20:24:57,082 [WARN] DbBoards:152 - board STM32H745I-DISCO / document id not found: 4598
+2020-05-09 20:24:57,083 [WARN] DbBoards:152 - board STM32H750B-DK / document id not found: 4598
+2020-05-09 20:24:57,083 [WARN] DbBoards:152 - board STM32H7B3I-DK / document id not found: 4598
+2020-05-09 20:24:57,083 [WARN] DbBoards:152 - board STM32L4R9I-DISCO / document id not found: 4598
+2020-05-09 20:24:57,083 [WARN] DbBoards:130 - board STM32MP157A-DK1 has no document id list !
+2020-05-09 20:24:57,083 [WARN] DbBoards:152 - board STM32L562E-DK / document id not found: 4598
+2020-05-09 20:24:57,083 [WARN] DbBoards:130 - board STM32L4P5G-DK has no document id list !
+2020-05-09 20:24:57,083 [WARN] DbBoards:130 - board STM32091C-EVAL has no document id list !
+2020-05-09 20:24:57,083 [WARN] DbBoards:130 - board STM3210C-EVAL has no document id list !
+2020-05-09 20:24:57,083 [WARN] DbBoards:130 - board STM32100E-EVAL has no document id list !
+2020-05-09 20:24:57,084 [WARN] DbBoards:130 - board STM3221G-EVAL has no document id list !
+2020-05-09 20:24:57,084 [WARN] DbBoards:130 - board STM32303C-EVAL has no document id list !
+2020-05-09 20:24:57,084 [WARN] DbBoards:130 - board STM32L152D-EVAL has no document id list !
+2020-05-09 20:24:57,084 [WARN] DbBoards:130 - board STM32746G-EVAL2 has no document id list !
+2020-05-09 20:24:57,084 [WARN] DbBoards:130 - board STM32F779I-EVAL has no document id list !
+2020-05-09 20:24:57,084 [WARN] DbBoards:130 - board STM32479I-EVAL has no document id list !
+2020-05-09 20:24:57,084 [WARN] DbBoards:130 - board STM32H743I-EVAL2 has no document id list !
+2020-05-09 20:24:57,084 [WARN] DbBoards:152 - board STM32H7B3I-EVAL / document id not found: 4596
+2020-05-09 20:24:57,085 [WARN] DbBoards:130 - board STM32H753I-EVAL2 has no document id list !
+2020-05-09 20:24:57,085 [WARN] DbBoards:130 - board STM32G474E-EVAL1 has no document id list !
+2020-05-09 20:24:57,085 [WARN] DbBoards:130 - board STEVAL-BFA001V1B has no document id list !
+2020-05-09 20:24:57,085 [WARN] DbBoards:130 - board STEVAL-BFA001V2B has no document id list !
+2020-05-09 20:24:57,085 [WARN] DbBoards:130 - board STEVAL-MKSBOX1V1 has no document id list !
+2020-05-09 20:24:57,085 [WARN] DbBoards:130 - board STEVAL-STWINKT1 has no document id list !
+2020-05-09 20:24:57,085 [WARN] DbBoards:130 - board STEVAL-IDP005V1 has no document id list !
+2020-05-09 20:24:57,085 [WARN] DbBoards:130 - board STEVAL-IDP005V2 has no document id list !
+2020-05-09 20:24:57,821 [INFO] ApiDb:158 - Load user favorites file C:\Users\admin/.stm32cubeide/favorites.boards.txt: 0 item(s)
+2020-05-09 20:24:57,822 [INFO] ApiDb:163 - User favorites Boards=[]
+2020-05-09 20:24:57,822 [INFO] DbBoards:209 - Set 0 / 0 favorites Boards
+2020-05-09 20:24:58,003 [INFO] LoadUrlFilesThread:161 - End of LoadServerUrlFiles without Thread
+2020-05-09 20:24:58,003 [INFO] MultiScanPanel:739 - Refresh data is succesful
+2020-05-09 20:24:58,008 [INFO] McuFilterPanel:249 - Update 0 favorites MCUs
+2020-05-09 20:24:58,173 [INFO] LoadUrlFilesThread:161 - End of LoadServerUrlFiles without Thread
+2020-05-09 20:24:58,173 [INFO] BoardDetailPanel:180 - Set advertising image to C:/Users/admin/STM32Cube/Repository/\PR_STM32Cube_GitHub_0320_V1.png
+2020-05-09 20:24:58,220 [INFO] BoardFilterPanel:211 - Update 0 favorites Boards
+2020-05-09 20:24:58,499 [INFO] CrossSelectorPresenter:1319 - Cross Selector saved comparison directory: C:\Users\admin\.stmcufinder\plugins\mcufinder\mcu\cs_comparisons_mx
+2020-05-09 20:25:45,291 [INFO] MainUpdater:2230 - connection check result : 10
+2020-05-09 20:25:45,338 [INFO] MicroXplorer:390 - Change Database Path : 
+2020-05-09 20:25:45,338 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.60
+2020-05-09 20:25:45,341 [INFO] PinOutPanel:1420 - setPackage(No Configuration,No Configuration)
+2020-05-09 20:25:45,342 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 362647928 Bytes (593494016)
+2020-05-09 20:25:45,343 [INFO] MicroXplorer:390 - Change Database Path : 
+2020-05-09 20:25:45,343 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.60
+2020-05-09 20:25:45,344 [INFO] OpenFileManager:274 - Change cursor
+2020-05-09 20:25:46,927 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (ADCFreqValue) has invalid value (36000000)
+2020-05-09 20:25:46,927 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2020-05-09 20:25:46,927 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (MCOFreq_Value) has invalid value (72000000)
+2020-05-09 20:25:46,928 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (USBFreq_Value) has invalid value (72000000)
+2020-05-09 20:25:47,074 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 479855536 Bytes (593494016)
+2020-05-09 20:25:47,087 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/admin/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 5 ms. number of Sw pack : 11
+2020-05-09 20:25:47,104 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1583335338032]
+2020-05-09 20:25:47,104 [INFO] ThirdPartyModel:521 - Component with status : MCU_INCOMPATIBLE for condition : OS Tick GTIM id : 1583335337359
+2020-05-09 20:25:47,105 [INFO] DependencyParser:785 - This component is not compatible with the current MCU : [1583335340608, 1583335338115]
+2020-05-09 20:25:47,207 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 5.0.0
+2020-05-09 20:25:47,207 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 1.1.0
+2020-05-09 20:25:47,208 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 4.1.0
+2020-05-09 20:25:47,208 [INFO] ThirdParty:899 - CMSIS Pack Vendor :ARM CMSIS 5.6.0
+2020-05-09 20:25:47,208 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.5.2
+2020-05-09 20:25:47,208 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 7.1.0
+2020-05-09 20:25:47,208 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2020-05-09 20:25:47,208 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.0.0
+2020-05-09 20:25:47,208 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 1.0.0
+2020-05-09 20:25:47,437 [INFO] PinOutPanel:1420 - setPackage(No Configuration,No Configuration)
+2020-05-09 20:25:47,438 [INFO] PinOutPanel:1420 - setPackage(STM32F103C8Tx,LQFP48)
+2020-05-09 20:25:47,881 [INFO] UtilMem:74 - Before build in PCC Used Memory: 409902632 Bytes (593494016)
+2020-05-09 20:25:48,383 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/admin/.stm32cubemx/plugins/power
+2020-05-09 20:25:48,437 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/admin/.stm32cubemx/plugins/power
+2020-05-09 20:25:48,486 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/admin/.stm32cubemx/plugins/power
+2020-05-09 20:25:48,491 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/admin/.stm32cubemx/plugins/power
+2020-05-09 20:25:48,685 [INFO] UtilMem:74 - After build in PCC Used Memory: 467209400 Bytes (593494016)
+2020-05-09 20:25:48,706 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,706 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,706 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,706 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,707 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,707 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,707 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,707 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,707 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,707 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,708 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,708 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,708 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,708 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,708 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,709 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,709 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,709 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,709 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,709 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,710 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,710 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,710 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,710 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,711 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,711 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,711 [INFO] IPUIPlugin:65 - create IPUIPlugin
+2020-05-09 20:25:48,752 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] toolchainItems.length=====1
+2020-05-09 20:25:48,839 [INFO] OpenFileManager:294 - Restore cursor
+2020-05-09 20:25:49,205 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 308143848 Bytes (593494016)
+2020-05-09 20:25:49,315 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 291949536 Bytes (593494016)
+2020-05-09 20:25:49,821 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: NVIC
+2020-05-09 20:25:49,821 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: USART
+2020-05-09 20:25:49,821 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: TIM1_8F1
+2020-05-09 20:25:49,821 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: SYS
+2020-05-09 20:25:49,822 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: GPIO
+2020-05-09 20:25:49,822 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: RCC
+2020-05-09 20:25:49,823 [INFO] CodeGenerator:603 - code generatio: config db path: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303\\db\
+2020-05-09 20:25:50,470 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\license.tmp_save
+2020-05-09 20:25:50,877 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\license.tmp
+2020-05-09 20:25:51,177 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\gpio.tmp_save
+2020-05-09 20:25:51,325 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\gpio.tmp
+2020-05-09 20:25:51,732 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-05-09 20:25:51,732 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for TIM
+2020-05-09 20:25:51,733 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-05-09 20:25:51,734 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-05-09 20:25:51,734 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2020-05-09 20:25:51,735 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-05-09 20:25:51,737 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2020-05-09 20:25:51,737 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-05-09 20:25:51,802 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\stm32f1xx_it.c_save
+2020-05-09 20:25:52,087 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\stm32f1xx_it.c
+2020-05-09 20:25:52,127 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Inc\stm32f1xx_it.h_save
+2020-05-09 20:25:52,221 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Inc\stm32f1xx_it.h
+2020-05-09 20:25:52,430 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\stm32f1xx_hal_msp.c_save
+2020-05-09 20:25:52,711 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\stm32f1xx_hal_msp.c
+2020-05-09 20:25:52,819 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\system.tmp_save
+2020-05-09 20:25:52,942 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\system.tmp
+2020-05-09 20:25:53,048 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\stm32f1xx_hal_timebase_tim.c_save
+2020-05-09 20:25:53,229 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\stm32f1xx_hal_timebase_tim.c
+2020-05-09 20:25:53,277 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Inc\stm32f1xx_hal_conf.h_save
+2020-05-09 20:25:53,414 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Inc\stm32f1xx_hal_conf.h
+2020-05-09 20:25:53,433 [WARN] IPConfigManager:2701 - IP not found : TIM
+2020-05-09 20:25:53,433 [WARN] IPConfigManager:2701 - IP not found : gpio
+2020-05-09 20:25:53,435 [WARN] CodeGenerator:2649 - IP not found : TIM
+2020-05-09 20:25:53,435 [WARN] CodeGenerator:2649 - IP not found : gpio
+2020-05-09 20:25:53,489 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Inc\main.h_save
+2020-05-09 20:25:53,636 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Inc\main.h
+2020-05-09 20:25:53,689 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\main.c_save
+2020-05-09 20:25:53,840 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\main.c
+2020-05-09 20:25:54,866 [INFO] ProjectBuilder:2002 - Time for Copy HAL[1] : 477mS.
+2020-05-09 20:25:54,871 [INFO] ProjectBuilder:2727 - Project Generator version: 3.7.1
+2020-05-09 20:25:55,566 [INFO] ConfigFileManager:1066 - The Die is : DIE410
+2020-05-09 20:26:08,968 [INFO] ProjectBuilder:2894 - Time for Generating toolchain IDE Files: 14097mS.
+2020-05-09 20:26:08,970 [INFO] ProjectBuilder:1878 - Time for Copy CMSIS : 1mS.
+2020-05-09 20:26:08,974 [INFO] ProjectBuilder:1878 - Time for Copy CMSIS : 1mS.
+2020-05-09 20:27:05,436 [INFO] ApiDbMcu:451 - Load IP Config File for FREERTOS
+2020-05-09 20:27:05,619 [ERROR] RtosPanel:515 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2020-05-09 20:27:05,749 [ERROR] RtosPanel:515 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2020-05-09 20:28:09,117 [INFO] BinarySerializedPackPreferences:66 - Sw Pack name : STMicroelectronics.X-CUBE-BLE1.5.0.0 preferred : false
+2020-05-09 20:28:09,118 [INFO] BinarySerializedPackPreferences:66 - Sw Pack name : STMicroelectronics.X-CUBE-SUBG2.1.1.0 preferred : false
+2020-05-09 20:28:09,118 [INFO] BinarySerializedPackPreferences:66 - Sw Pack name : STMicroelectronics.X-CUBE-GNSS1.4.1.0 preferred : false
+2020-05-09 20:28:09,118 [INFO] BinarySerializedPackPreferences:66 - Sw Pack name : ARM.CMSIS.5.6.0 preferred : false
+2020-05-09 20:28:09,119 [INFO] BinarySerializedPackPreferences:66 - Sw Pack name : STMicroelectronics.X-CUBE-NFC4.1.5.2 preferred : false
+2020-05-09 20:28:09,119 [INFO] BinarySerializedPackPreferences:66 - Sw Pack name : STMicroelectronics.X-CUBE-MEMS1.7.1.0 preferred : false
+2020-05-09 20:28:09,119 [INFO] BinarySerializedPackPreferences:66 - Sw Pack name : STMicroelectronics.FreeRTOS.0.0.1 preferred : false
+2020-05-09 20:28:09,119 [INFO] BinarySerializedPackPreferences:66 - Sw Pack name : STMicroelectronics.X-CUBE-ALGOBUILD.1.0.0 preferred : false
+2020-05-09 20:28:09,119 [INFO] BinarySerializedPackPreferences:66 - Sw Pack name : STMicroelectronics.X-CUBE-BLE2.1.0.0 preferred : false
+2020-05-09 20:29:50,865 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:29:50,865 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-05-09 20:29:50,866 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-05-09 20:30:25,635 [INFO] EditThreadDialog:688 - RAM SIZE (in KB): 20
+2020-05-09 20:30:25,636 [INFO] EditThreadDialog:690 - RAM SIZE (in words): 5120
+2020-05-09 20:34:58,028 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:34:58,028 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-05-09 20:34:58,028 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-05-09 20:34:58,029 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:34:58,029 [WARN] TasksAndQueuesTab:737 - 500 128
+2020-05-09 20:34:58,029 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-05-09 20:34:58,219 [ERROR] RtosPanel:515 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2020-05-09 20:35:06,301 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:35:06,301 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-05-09 20:35:06,301 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-05-09 20:35:06,302 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:35:06,302 [WARN] TasksAndQueuesTab:737 - 500 128
+2020-05-09 20:35:06,302 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-05-09 20:35:21,059 [INFO] EditThreadDialog:688 - RAM SIZE (in KB): 20
+2020-05-09 20:35:21,060 [INFO] EditThreadDialog:690 - RAM SIZE (in words): 5120
+2020-05-09 20:36:15,302 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:36:15,302 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-05-09 20:36:15,302 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-05-09 20:36:15,303 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:36:15,303 [WARN] TasksAndQueuesTab:737 - 500 128
+2020-05-09 20:36:15,303 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-05-09 20:36:15,303 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:36:15,303 [WARN] TasksAndQueuesTab:737 - 500 128
+2020-05-09 20:36:15,303 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-05-09 20:36:35,492 [INFO] EditThreadDialog:688 - RAM SIZE (in KB): 20
+2020-05-09 20:36:35,492 [INFO] EditThreadDialog:690 - RAM SIZE (in words): 5120
+2020-05-09 20:37:10,154 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:37:10,154 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-05-09 20:37:10,154 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-05-09 20:37:10,155 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:37:10,155 [WARN] TasksAndQueuesTab:737 - 500 128
+2020-05-09 20:37:10,155 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-05-09 20:37:10,155 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:37:10,155 [WARN] TasksAndQueuesTab:737 - 500 128
+2020-05-09 20:37:10,155 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-05-09 20:37:10,155 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:37:10,155 [WARN] TasksAndQueuesTab:737 - 500 128
+2020-05-09 20:37:10,155 [WARN] TasksAndQueuesTab:749 - max value is: 768.0
+2020-05-09 20:37:17,373 [ERROR] RtosPanel:515 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2020-05-09 20:38:05,777 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:05,777 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-05-09 20:38:05,777 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:05,777 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:05,777 [WARN] TasksAndQueuesTab:737 - 500 128
+2020-05-09 20:38:05,777 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:05,777 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:05,778 [WARN] TasksAndQueuesTab:737 - 500 128
+2020-05-09 20:38:05,778 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:05,778 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:05,778 [WARN] TasksAndQueuesTab:737 - 500 128
+2020-05-09 20:38:05,778 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:08,547 [INFO] EditThreadDialog:688 - RAM SIZE (in KB): 20
+2020-05-09 20:38:08,548 [INFO] EditThreadDialog:690 - RAM SIZE (in words): 5120
+2020-05-09 20:38:16,115 [INFO] EditThreadDialog:688 - RAM SIZE (in KB): 20
+2020-05-09 20:38:16,115 [INFO] EditThreadDialog:690 - RAM SIZE (in words): 5120
+2020-05-09 20:38:19,623 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:19,623 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-05-09 20:38:19,623 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:19,624 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:19,624 [WARN] TasksAndQueuesTab:737 - 500 128
+2020-05-09 20:38:19,624 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:19,624 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:19,624 [WARN] TasksAndQueuesTab:737 - 500 128
+2020-05-09 20:38:19,625 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:19,625 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:19,625 [WARN] TasksAndQueuesTab:737 - 300 128
+2020-05-09 20:38:19,625 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:23,867 [INFO] EditThreadDialog:688 - RAM SIZE (in KB): 20
+2020-05-09 20:38:23,867 [INFO] EditThreadDialog:690 - RAM SIZE (in words): 5120
+2020-05-09 20:38:26,837 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:26,837 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-05-09 20:38:26,837 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:26,837 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:26,837 [WARN] TasksAndQueuesTab:737 - 500 128
+2020-05-09 20:38:26,837 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:26,837 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:26,837 [WARN] TasksAndQueuesTab:737 - 300 128
+2020-05-09 20:38:26,838 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:26,838 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:26,838 [WARN] TasksAndQueuesTab:737 - 300 128
+2020-05-09 20:38:26,838 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:27,708 [INFO] EditThreadDialog:688 - RAM SIZE (in KB): 20
+2020-05-09 20:38:27,708 [INFO] EditThreadDialog:690 - RAM SIZE (in words): 5120
+2020-05-09 20:38:29,468 [INFO] EditThreadDialog:688 - RAM SIZE (in KB): 20
+2020-05-09 20:38:29,468 [INFO] EditThreadDialog:690 - RAM SIZE (in words): 5120
+2020-05-09 20:38:36,949 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:36,949 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-05-09 20:38:36,950 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:36,950 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:36,950 [WARN] TasksAndQueuesTab:737 - 300 128
+2020-05-09 20:38:36,950 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:36,950 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:36,950 [WARN] TasksAndQueuesTab:737 - 300 128
+2020-05-09 20:38:36,950 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:36,950 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:36,950 [WARN] TasksAndQueuesTab:737 - 300 128
+2020-05-09 20:38:36,950 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:39,363 [INFO] EditThreadDialog:688 - RAM SIZE (in KB): 20
+2020-05-09 20:38:39,363 [INFO] EditThreadDialog:690 - RAM SIZE (in words): 5120
+2020-05-09 20:38:43,444 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:43,444 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-05-09 20:38:43,444 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:43,444 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:43,445 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 20:38:43,445 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:43,445 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:43,445 [WARN] TasksAndQueuesTab:737 - 300 128
+2020-05-09 20:38:43,445 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:43,445 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:43,445 [WARN] TasksAndQueuesTab:737 - 300 128
+2020-05-09 20:38:43,445 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:44,755 [INFO] EditThreadDialog:688 - RAM SIZE (in KB): 20
+2020-05-09 20:38:44,755 [INFO] EditThreadDialog:690 - RAM SIZE (in words): 5120
+2020-05-09 20:38:48,991 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:48,991 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-05-09 20:38:48,992 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:48,992 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:48,992 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 20:38:48,992 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:48,992 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:48,992 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 20:38:48,993 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:48,993 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:48,993 [WARN] TasksAndQueuesTab:737 - 300 128
+2020-05-09 20:38:48,993 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:51,139 [INFO] EditThreadDialog:688 - RAM SIZE (in KB): 20
+2020-05-09 20:38:51,139 [INFO] EditThreadDialog:690 - RAM SIZE (in words): 5120
+2020-05-09 20:38:54,402 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:54,402 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-05-09 20:38:54,402 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:54,402 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:54,402 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 20:38:54,402 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:54,403 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:54,403 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 20:38:54,403 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:38:54,403 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:38:54,403 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 20:38:54,403 [WARN] TasksAndQueuesTab:749 - max value is: 1750.0
+2020-05-09 20:41:01,317 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:41:01,317 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-05-09 20:41:01,317 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 20:41:01,317 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:41:01,317 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 20:41:01,317 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 20:41:01,317 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:41:01,318 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 20:41:01,318 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 20:41:01,318 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:41:01,318 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 20:41:01,318 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 20:41:04,517 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:41:04,517 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-05-09 20:41:04,517 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 20:41:04,517 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:41:04,517 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 20:41:04,517 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 20:41:04,517 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:41:04,517 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 20:41:04,517 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 20:41:04,518 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:41:04,518 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 20:41:04,518 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 20:41:45,878 [INFO] NvicIntPanel:88 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,735x425,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2020-05-09 20:42:06,364 [INFO] NvicIntPanel:88 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2020-05-09 20:42:15,102 [ERROR] RtosPanel:515 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2020-05-09 20:42:17,690 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:42:17,690 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-05-09 20:42:17,691 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 20:42:17,691 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:42:17,691 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 20:42:17,691 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 20:42:17,691 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:42:17,691 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 20:42:17,692 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 20:42:17,692 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 20:42:17,692 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 20:42:17,692 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 20:43:01,904 [INFO] NvicIntPanel:88 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,735x425,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2020-05-09 20:43:05,885 [ERROR] RtosPanel:515 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2020-05-09 20:43:20,250 [INFO] Gpio:248 - dependency for GPIO [RCC, SYS, USART1]
+2020-05-09 20:43:52,745 [INFO] Gpio:248 - dependency for GPIO [RCC, SYS, USART1]
+2020-05-09 20:43:52,777 [INFO] Gpio:248 - dependency for GPIO [RCC, SYS, USART1]
+2020-05-09 20:43:52,823 [INFO] Gpio:248 - dependency for GPIO [RCC, SYS, USART1]
+2020-05-09 20:45:28,981 [ERROR] RtosPanel:515 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2020-05-09 20:45:51,494 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 488978904 Bytes (829423616)
+2020-05-09 20:45:52,857 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 496961344 Bytes (829423616)
+2020-05-09 20:45:53,167 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 514032144 Bytes (829423616)
+2020-05-09 20:45:53,392 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: NVIC
+2020-05-09 20:45:53,392 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: FREERTOS
+2020-05-09 20:45:53,392 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: USART
+2020-05-09 20:45:53,392 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: TIM1_8F1
+2020-05-09 20:45:53,392 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: SYS
+2020-05-09 20:45:53,393 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: GPIO
+2020-05-09 20:45:53,393 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: RCC
+2020-05-09 20:45:53,393 [INFO] CodeGenerator:603 - code generatio: config db path: D:\ST\STM32CubeIDE_1.3.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.6.1.202004052303\\db\
+2020-05-09 20:45:53,679 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\license.tmp_save
+2020-05-09 20:45:53,747 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\license.tmp
+2020-05-09 20:45:53,818 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\gpio.tmp_save
+2020-05-09 20:45:53,897 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\gpio.tmp
+2020-05-09 20:45:54,064 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-05-09 20:45:54,098 [INFO] Middleware:1103 - No code input for Bsp Dependency
+2020-05-09 20:45:54,172 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\rtos_inc.tmp_save
+2020-05-09 20:45:54,384 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\rtos_inc.tmp
+2020-05-09 20:45:54,490 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\rtos_vars.tmp_save
+2020-05-09 20:45:54,588 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\rtos_vars.tmp
+2020-05-09 20:45:54,656 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\rtos_pfp.tmp_save
+2020-05-09 20:45:54,733 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\rtos_pfp.tmp
+2020-05-09 20:45:54,789 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\rtos_obj_creat.tmp_save
+2020-05-09 20:45:54,852 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\rtos_obj_creat.tmp
+2020-05-09 20:45:54,908 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\rtos_kernelStart.tmp_save
+2020-05-09 20:45:54,964 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\rtos_kernelStart.tmp
+2020-05-09 20:45:55,014 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\rtos_default_thread.tmp_save
+2020-05-09 20:45:55,074 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\rtos_default_thread.tmp
+2020-05-09 20:45:55,112 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\rtos_threads.tmp_save
+2020-05-09 20:45:55,174 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\rtos_threads.tmp
+2020-05-09 20:45:55,227 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Inc\FreeRTOSConfig.h_save
+2020-05-09 20:45:55,307 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Inc\FreeRTOSConfig.h
+2020-05-09 20:45:55,356 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\freertos.c_save
+2020-05-09 20:45:55,454 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\freertos.c
+2020-05-09 20:45:55,457 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-05-09 20:45:55,458 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for TIM
+2020-05-09 20:45:55,459 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-05-09 20:45:55,460 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-05-09 20:45:55,461 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2020-05-09 20:45:55,462 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-05-09 20:45:55,463 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2020-05-09 20:45:55,464 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-05-09 20:45:55,506 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\stm32f1xx_it.c_save
+2020-05-09 20:45:55,603 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\stm32f1xx_it.c
+2020-05-09 20:45:55,639 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Inc\stm32f1xx_it.h_save
+2020-05-09 20:45:55,710 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Inc\stm32f1xx_it.h
+2020-05-09 20:45:55,756 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\stm32f1xx_hal_msp.c_save
+2020-05-09 20:45:55,891 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\stm32f1xx_hal_msp.c
+2020-05-09 20:45:55,921 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\system.tmp_save
+2020-05-09 20:45:55,979 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\MXTmpFiles\system.tmp
+2020-05-09 20:45:56,014 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\stm32f1xx_hal_timebase_tim.c_save
+2020-05-09 20:45:56,089 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\stm32f1xx_hal_timebase_tim.c
+2020-05-09 20:45:56,139 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Inc\stm32f1xx_hal_conf.h_save
+2020-05-09 20:45:56,295 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Inc\stm32f1xx_hal_conf.h
+2020-05-09 20:45:56,305 [WARN] IPConfigManager:2701 - IP not found : TIM
+2020-05-09 20:45:56,305 [WARN] IPConfigManager:2701 - IP not found : gpio
+2020-05-09 20:45:56,306 [WARN] CodeGenerator:2649 - IP not found : TIM
+2020-05-09 20:45:56,306 [WARN] CodeGenerator:2649 - IP not found : gpio
+2020-05-09 20:45:56,338 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Inc\main.h_save
+2020-05-09 20:45:56,451 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Inc\main.h
+2020-05-09 20:45:56,497 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\main.c_save
+2020-05-09 20:45:56,631 [INFO] CodeEngine:206 - Generated code: C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\Core\Src\main.c
+2020-05-09 20:45:57,635 [INFO] ProjectBuilder:2002 - Time for Copy HAL[1] : 420mS.
+2020-05-09 20:45:57,639 [INFO] ProjectBuilder:2727 - Project Generator version: 3.7.1
+2020-05-09 20:45:57,857 [INFO] ConfigFileManager:1066 - The Die is : DIE410
+2020-05-09 20:45:59,824 [INFO] ProjectBuilder:2894 - Time for Generating toolchain IDE Files: 2185mS.
+2020-05-09 20:45:59,826 [INFO] ProjectBuilder:1878 - Time for Copy CMSIS : 1mS.
+2020-05-09 20:45:59,834 [INFO] ProjectBuilder:1878 - Time for Copy CMSIS : 0mS.
+2020-05-09 20:47:16,736 [INFO] Gpio:248 - dependency for GPIO [RCC, SYS, USART1]
+2020-05-09 22:34:21,134 [ERROR] RtosPanel:515 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2020-05-09 22:35:39,375 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 22:35:39,375 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-05-09 22:35:39,375 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 22:35:39,375 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 22:35:39,376 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 22:35:39,376 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 22:35:39,376 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 22:35:39,376 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 22:35:39,376 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 22:35:39,376 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 22:35:39,376 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 22:35:39,376 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 22:35:44,791 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 22:35:44,791 [WARN] TasksAndQueuesTab:737 - 128 128
+2020-05-09 22:35:44,791 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 22:35:44,791 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 22:35:44,791 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 22:35:44,792 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 22:35:44,792 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 22:35:44,792 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 22:35:44,792 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 22:35:44,792 [INFO] TasksAndQueuesTab:731 - Dynamic
+2020-05-09 22:35:44,792 [WARN] TasksAndQueuesTab:737 - 400 128
+2020-05-09 22:35:44,792 [WARN] TasksAndQueuesTab:749 - max value is: 1500.0
+2020-05-09 22:59:48,465 [INFO] Activator:176 - 
+
+
+2020-05-09 22:59:48,516 [INFO] Activator:177 - !SESSION log4j initialized

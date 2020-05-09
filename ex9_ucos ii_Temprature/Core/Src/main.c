@@ -19,6 +19,8 @@
   * 
   * 这里修改了TIM4作为HAL Time Base的重装载计数周期
   * 使得HAL_Delay(1)的时长为10us,方便DHT11的延时工作
+  * 
+  * 2020.5.9 update: 又改回1ms了 =.=||
   */
 
 /* USER CODE END Header */
