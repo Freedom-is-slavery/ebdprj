@@ -61,5 +61,4 @@ void DisplayOneDigit(uint8_t dig, uint8_t num)
     HAL_GPIO_WritePin(SEG_F_GPIO_Port, SEG_F_Pin, DigTbl[num][5]);
     HAL_GPIO_WritePin(SEG_G_GPIO_Port, SEG_G_Pin, DigTbl[num][6]);
     HAL_GPIO_WritePin(SEG_DP_GPIO_Port, SEG_DP_Pin, DigTbl[num][7]);
-
 }

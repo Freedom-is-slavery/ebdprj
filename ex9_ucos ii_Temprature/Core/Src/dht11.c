@@ -67,7 +67,8 @@ void TIM3Delayus(uint16_t nus)
 
 /**
  * @brief 主机GPIO模式切换
- * 
+ * @param mode 输入 or 输出模式
+ * @arg MODE_INPUT, MODE_OUTPUT
  */
 void DHT11GPIOModeSwitch(uint8_t mode)
 {
@@ -86,15 +87,13 @@ void DHT11GPIOModeSwitch(uint8_t mode)
 }
 
 /**
- * @brief 
- * 
+ * @brief 启动传输
  * 主机发送低电平信号开始传输,维持20ms,
  * 随后主机切换至输入模式,DHT响应信号拉低后拉高,最后拉低代表数据传输开始
- * 
+ * @retval DHT11State
  */
 DHT11State DHT11Start(void)
 {
-    //OS_CPU_SR cpu_sr;
     /* GPIO Output Push Pull Mode, 拉低作为开始信号 */
     if (HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) != GPIO_PIN_SET)
         return ERR_BUSBUSY;
@@ -104,30 +103,20 @@ DHT11State DHT11Start(void)
         HAL_GPIO_WritePin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin, RESET);
         /* 延迟20ms保证DHT11能检测到起始信号 */
         TIM3Delayus(20000);
-        //OS_ENTER_CRITICAL();
         DHT11GPIOModeSwitch(MODE_INPUT);
         /* 等待30us读DHT11的响应信号 */
         TIM3Delayus(30);
         if (HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) != GPIO_PIN_RESET)
-        {
-            //OS_EXIT_CRITICAL();
             return ERR_NORESPONSE;
-        }
-        
+
         while(HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) != GPIO_PIN_SET);
-        
         TIM3Delayus(85);
+        
         if (HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) != GPIO_PIN_RESET)
-        {
             return ERR_RESPONSETIMING;
-        }
         /* 此时数据传输开始 */
         else
-        {
-            //OS_EXIT_CRITICAL();
-            return OK_RESPONSE;
-        }
-            
+            return OK_RESPONSE;   
     }
 }
 
@@ -141,22 +130,16 @@ DHT11State DHT11ReceiveAndCheck(void)
 {
     uint8_t cnt, tmp[5] = {0, 0, 0, 0, 0};
     uint8_t status;
-    //uint32_t tickcnt;
-    //OS_CPU_SR cpu_sr;
 
-    //OS_ENTER_CRITICAL();
     for (cnt = 0; cnt < 40; cnt++)
     {
         /* 与上升沿对齐 */
         while(HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) != GPIO_PIN_SET);
-        
         /* 延迟40us以后还是高电平说明接收到'1', 低电平说明接收到'0' */
         TIM3Delayus(40);
-        //__HAL_TIM_SET_COUNTER(&htim3, 0);           //test time
         status = HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) & 0X01;
         /* 湿度整数,湿度小数,温度整数,温度小数,校验和 */
         tmp[cnt / 8] |= (((uint8_t)status) << (7 - cnt % 8));
-        //tickcnt = __HAL_TIM_GET_COUNTER(&htim3);    //test time
         if (HAL_GPIO_ReadPin(DHT11_DATA_GPIO_Port, DHT11_DATA_Pin) == GPIO_PIN_SET)
         {   
             /* 针对读到'1'的情况 */
@@ -168,7 +151,6 @@ DHT11State DHT11ReceiveAndCheck(void)
             }   
         }
     }
-    //OS_EXIT_CRITICAL();
 
     if (tmp[4] == tmp[0] + tmp[1] + tmp[2] + tmp[3])
     {
@@ -180,7 +162,6 @@ DHT11State DHT11ReceiveAndCheck(void)
     }
     else
         return ERR_CHECK;
-    
 }
 
 
