@@ -1,28 +1,24 @@
-22:22:46 **** Incremental Build of configuration Debug for project ex10_freertos_temperature ****
+01:16:14 **** Incremental Build of configuration Debug for project project ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../userappAPI/inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "ex10_freertos_temperature.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\admin\Desktop\STM32_test\ebdprj\ex10_freertos_temperature\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ex10_freertos_temperature.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ex10_freertos_temperature.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../ucos-ii/config -I../ucos-ii/port -I../ucos-ii/src -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\admin\Desktop\STM32_test\ebdprj\project\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: project.elf
  
-arm-none-eabi-objdump -h -S  ex10_freertos_temperature.elf  > "ex10_freertos_temperature.list"
-arm-none-eabi-objcopy  -O binary  ex10_freertos_temperature.elf  "ex10_freertos_temperature.bin"
-arm-none-eabi-size   ex10_freertos_temperature.elf 
+arm-none-eabi-objdump -h -S  project.elf  > "project.list"
+arm-none-eabi-objcopy  -O binary  project.elf  "project.bin"
+arm-none-eabi-size   project.elf 
    text	   data	    bss	    dec	    hex	filename
-  15176	    136	   8720	  24032	   5de0	ex10_freertos_temperature.elf
+  18160	     32	  17744	  35936	   8c60	project.elf
 Finished building: default.size.stdout
  
-Finished building: ex10_freertos_temperature.bin
+Finished building: project.bin
  
-Finished building: ex10_freertos_temperature.list
+Finished building: project.list
  
-22:23:01 **** Incremental Build of configuration Debug for project ex10_freertos_temperature ****
+01:17:27 **** Incremental Build of configuration Debug for project project ****
 make -j8 all 
-arm-none-eabi-size   ex10_freertos_temperature.elf 
+arm-none-eabi-size   project.elf 
    text	   data	    bss	    dec	    hex	filename
-  15176	    136	   8720	  24032	   5de0	ex10_freertos_temperature.elf
+  18160	     32	  17744	  35936	   8c60	project.elf
 Finished building: default.size.stdout
- 
-23:00:02 **** Clean-only build of configuration Debug for project ex10_freertos_temperature ****
-make -j8 clean 
-rm -rf *
  

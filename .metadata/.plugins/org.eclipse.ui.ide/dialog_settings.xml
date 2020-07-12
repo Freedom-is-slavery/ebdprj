@@ -16,6 +16,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\ZJU\课程及学习相关\大三春夏\嵌入式系统\实验\EBDCourseCode\ebdprj\project"/>
+			<item value="D:\ZJU\课程及学习相关\大三春夏\嵌入式系统\实验\EBDCourseCode\ebdprj\ex9_ucos ii_Temprature"/>
 			<item value="C:\Users\admin\Desktop\STM32_test\test\ex8_ucos ii\ex8_ucos ii"/>
 			<item value="C:\Users\admin\Desktop\STM32_test\ebdprj\ex9_ucos ii_Temprature"/>
 			<item value="C:\Users\admin\Desktop\STM32_test\STM32F103"/>
